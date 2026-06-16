@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc介绍</title>
+    <style>
+        body{
+            background-image: url("BackGroundImage.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            background-attachment: fixed;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            overflow: hidden;
+        }
+        #div_id1{
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255,255,255,0.3);
+            width: 50%;
+            height: 60%;
+            border-radius: 10px;
+            -webkit-backdrop-filter: blur(9px);
+            backdrop-filter: blur(9px);
+        }
+        #text1{
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 200;
+            font-size: 50px;
+            background: linear-gradient(90deg,rgb(255, 255, 255),rgb(253, 192, 255),rgb(212, 0, 255));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        #text2{
+            position: fixed;
+            top: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 200;
+            font-size: 50px;
+            color: white;
+        }
+        #text3{
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 23px;
+            font-weight: 200;
+            width: 320px;
+            word-break: break-all;
+            line-height: 1.5;
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(No_BrYM) {
+            No_BrYM.preventDefault()
+        })
+    </script>
+</head>
+<body>
+    <h1 id="text1">Ghvswebtpc</h1>
+    <div id="div_id1">
+        <h1 id="text2">简介</h1>
+        <p id="text3">
+            Ghvswebtpc是GitHub:T-PageCode的网页模拟系统项目<br>
+            Gh=GitHub(在GitHub发布)<br>
+            vs=Visual Studio和Visual Studio Code(这是编写的工具)<br>
+            web=网页体验(只需要在浏览器访问网站)<br>
+            tpc=GitHub名称T-PageCode缩写。<br>
+            这与名称相似的网站和公司，软件等没有任何关系。<br>
+            <span style="font-size: 15px;opacity: 0.7;font-weight: 200;">T-PageCode是GitHub用户名</span>
+        </p>
+    </div>
+</body>
+</html>

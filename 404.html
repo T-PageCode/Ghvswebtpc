@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Ghvswebtpc介绍</title>
+    <style>
+        body{
+            background-image: url("BackGroundImage.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        #div_id1{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 30%;
+            background-color: rgba(255,255,255,0.3);
+            -webkit-backdrop-filter: blur(9px);
+            backdrop-filter: blur(9px);
+            border-radius: 10px
+        }
+        #text1{
+            position: fixed;
+            top: -7.5%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background-color: rgb(178, 16, 211);
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            font-weight: 200;
+            border-radius: 50%;
+        }
+        #text2{
+            position: fixed;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%);
+            color: white;
+            font-size: 30px;
+            font-weight: 200;
+            white-space: nowrap;
+        }
+        #text3{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 17.5px;
+            color: white;
+        }
+        #text4{
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: 200;
+            font-size: 60px;
+        }
+        #text5{
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: 200;
+            font-size: 25px;
+        }
+        #button1{
+            position: fixed;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 20%;
+            height: 15%;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(103, 0, 199);
+            color: white;
+            font-size: 15px;
+            transition: background-color 0.5s ease;
+        }
+        #button1:hover{
+            background-color: rgb(212, 0, 255);
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoBrowserYJMenu){
+            NoBrowserYJMenu.preventDefault();
+        })
+    </script>
+</head>
+<body>
+    <div id="div_id1">
+        <h1 id="text1">?</h1>
+        <h1 id="text2">您查找的页面不存在</h1>
+        <p id="text3">页面不存在或页面被删除</p>
+        <button id="button1" onclick="window.location.href='index.html'">返回主页</button>
+    </div>
+    <h1 id="text4">404</h1>
+    <h2 id="text5">Not Found</h2>
+</body>
+</html>
