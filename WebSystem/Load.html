@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../SystemLogo.png">
+    <title>Ghvswebtpc</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #image1{
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 20%;
+        }
+        #div_id1{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 25%;
+            height: 0.1%;
+            background-color: white;
+            animation: divani1 .5s infinite alternate;
+            color: rgb(255,255,255)
+        }
+        @keyframes divani1{
+            from {
+                transform: translate(0%);
+            }   
+            to {
+                transform: translate(-80%,50%);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+        setTimeout(() => {
+            location.href="./Install1.html";
+        },5000);
+    </script>
+</head>
+<body>
+    <img src="../SystemLogo.png" alt="系统图标" id="image1"></img>
+    <div id="div_id1"></div>
+</body>
+</html>
