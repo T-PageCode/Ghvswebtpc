@@ -6,8 +6,11 @@
     <link rel="icon" href="../SystemLogo.png">
     <style>
         body{
-            background: linear-gradient(150deg,rgb(183, 0, 255),rgb(212, 148, 255),rgb(212, 148, 255));
-            background-attachment: fixed;
+            background-image: url(../BackGroundImage.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
             -moz-user-select: none;
             -webkit-user-select: none;
             user-select: none;
@@ -59,26 +62,24 @@
         }
         #btn1{
             position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 40%;
+            top: 85%;
+            left: 80%;
+            width: 20%;
             height: 10%;
             transform: translateX(-50%);
             border: none;
             border-radius: 10px;
-            background-color: rgb(230, 230, 230);
-            color: rgb(0, 0, 0);
-            transition: background-color 0.5s ease,
-            color 0.5s ease;
+            background-color: rgb(193, 100, 255);
+            color: rgb(255, 255, 255);
+            transition: background-color 0.5s ease;
         }
         #btn1:hover{
-            background-color: rgb(217, 122, 255);
-            color: white;
+            background-color: rgb(142, 0, 207);
         }
         #btn2{
             position: fixed;
             top: 85%;
-            left: 35%;
+            left: 50%;
             width: 20%;
             height: 10%;
             transform: translateX(-50%);
@@ -89,20 +90,38 @@
             transition: background-color 0.5s ease;
         }
         #btn2:hover{
-            background-color: rgb(142, 0, 207);
+            background-color: rgb(142,0,207);
         }
         #btn3{
             position: fixed;
             top: 85%;
-            left: 65%;
+            left: 20%;
             width: 20%;
             height: 10%;
             transform: translateX(-50%);
             border: none;
             border-radius: 10px;
-            color: rgb(0, 0, 0);
-            transition: background-color 0.5s ease,
-            color 0.5s ease;
+            background-color: rgb(229, 189, 255);
+            color: rgb(255, 255, 255);
+            transition: background-color 0.5s ease;
+        }
+        #btn3:hover{
+            background-color: rgb(217, 135, 255);
+        }
+        #ipt1{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 10px;
+            border: 2px solid rgb(217, 135, 255);
+            width: 50%;
+            height: 7.5%;
+            font-size: 17.5px;
+        }
+        #ipt1:focus{
+            outline: none;
+            border-color: rgb(142,0,207);
         }
     </style>
     <script>
@@ -111,26 +130,32 @@
         })
         function btn1_z() {
             let btn1 = document.getElementById("btn1");
-            btn1.style.backgroundColor = "rgb(150,0,255)";
+            btn1.style.backgroundColor = "rgb(100,0,200)";
             btn1.style.color = "white";
             let btn3 = document.getElementById("btn3");
-            btn3.style.backgroundColor = "rgb(230,230,230)"
-            if (btn1.style.backgroundColor = "rgb(150,0,255)") {
-                btn3.style.backgroundColor = "rgb(142,0,207)";
-                btn3.style.color = "white";
-            }
         }
+        function NextPw(){
+            let UserPassword = document.getElementById("ipt1").value;
+            localStorage.setItem("UserPw",UserPassword);
+            location.href="Szjm.html"
+        }
+                document.addEventListener("keydown",function(keyd){
+            if (keyd.key === "Enter"){
+                keyd.preventDefault()
+                NextPw()
+            }
+        })
     </script>
 </head>
 <body>
     <div id="div_id1">
-        <h1 id="text1">安装Ghvswebtpc</h1>
-        <img src="../SystemLogo.png" alt="系统图标" id="image1">
+        <h1 id="text1">设置Ghvswebtpc</h1>
         <p id="text2">Ghvswebtpc</p>
-        <h2 id="text3">选择语言</h2>
-        <button id="btn1" onclick="btn1_z();">简体中文</button>
-        <button id="btn2" onclick="window.location.href='../index.html'">返回</button>
-        <button id="btn3" onclick="window.location.href='./Install2.html'">下一步</button>
+        <h2 id="text3">请输入您的密码</h2>
+        <input id="ipt1" maxlength="25">
+        <button id="btn1" onclick="NextPw()">下一步</button>
+        <button id="btn2" onclick="window.location.href='Install8.html'">返回</button>
+        <button id="btn3" onclick="window.location.href='Install1.html';localStorage.removeItem('User');">重新安装</button>
     </div>
 </body>
 </html>

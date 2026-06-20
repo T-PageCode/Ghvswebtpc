@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../SystemLogo.png">
+    <title>Ghvswebtpc</title>
+    <style>
+        body{
+            background: linear-gradient(150deg,rgb(183,0,255),rgb(212,148,255),rgb(212,148,255));
+            background-attachment: fixed;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #image1{
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 20%;
+        }
+        #UserNameShow{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-weight: 200;
+        }
+        #text1{
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-weight: 200;
+        }
+        #btn1{
+            position: fixed;
+            top: 70%;
+            left: 57%;
+            transform: translate(-50%,-50%);
+            width: 10%;
+            height: 4%;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(200, 117, 255);
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+        #btn1:hover{
+            background-color: rgb(172,82,232);
+        }
+        #btn2{
+            position: fixed;
+            top: 70%;
+            left: 43%;
+            transform: translate(-50%,-50%);
+            width: 10%;
+            height: 4%;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(200, 117, 255);
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+        #btn2:hover{
+            background-color: rgb(172,82,232);
+        }
+        #ipt1{
+            position: fixed;
+            top: 62%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 2px solid rgb(196, 109, 255);
+            border-radius: 10px;
+            width: 25%;
+            height: 4%;
+            background-color: rgb(228, 188, 255);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+        #ipt1:focus{
+            outline: none;
+            border: 2px solid rgb(172, 82, 232);
+        }
+    </style>
+</head>
+<body>
+    <img src="../UserIcon.png" alt="用户图标" id="image1">
+    <h1 id="UserNameShow"></h1>
+    <p id="text1">请输入密码</p>
+    <input id="ipt1">
+    <button id="btn1" onclick="IfPwY()">确定</button>
+    <button id="btn2">返回</button>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault();
+        })
+        let ipt1 = document.getElementById("ipt1");
+        let UserText = localStorage.getItem("User") || "Administrator";
+        document.getElementById("UserNameShow").innerText = UserText;
+        let UserPwText = localStorage.getItem("UserPw") || "";
+        function IfPwY() {
+            let ipt1i = ipt1.value.trim();
+            if (UserPwText === ipt1i){
+                location.href="LoginLoad.html";
+            }
+            else{
+                location.href="LoginPwError.html";
+            }
+        }
+        document.addEventListener("keydown",function(keyd){
+            if (keyd.key === "Enter"){
+                keyd.preventDefault()
+                let ipt1i = ipt1.value.trim();
+                if (UserPwText === ipt1i){
+                    location.href="LoginLoad.html";
+                }
+                else{
+                    location.href="LoginPwError.html";
+                }
+            }
+        })
+    </script>
+</body>
+</html>

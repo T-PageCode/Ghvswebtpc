@@ -6,8 +6,11 @@
     <link rel="icon" href="../SystemLogo.png">
     <style>
         body{
-            background: linear-gradient(150deg,rgb(183, 0, 255),rgb(212, 148, 255),rgb(212, 148, 255));
-            background-attachment: fixed;
+            background-image: url(../BackGroundImage.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
             -moz-user-select: none;
             -webkit-user-select: none;
             user-select: none;
@@ -57,28 +60,10 @@
             left: 5%;
             height: 15%;
         }
-        #btn1{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 40%;
-            height: 10%;
-            transform: translateX(-50%);
-            border: none;
-            border-radius: 10px;
-            background-color: rgb(230, 230, 230);
-            color: rgb(0, 0, 0);
-            transition: background-color 0.5s ease,
-            color 0.5s ease;
-        }
-        #btn1:hover{
-            background-color: rgb(217, 122, 255);
-            color: white;
-        }
         #btn2{
             position: fixed;
             top: 85%;
-            left: 35%;
+            left: 65%;
             width: 20%;
             height: 10%;
             transform: translateX(-50%);
@@ -91,11 +76,11 @@
         #btn2:hover{
             background-color: rgb(142, 0, 207);
         }
-        #btn3{
+        #btn1{
             position: fixed;
-            top: 85%;
-            left: 65%;
-            width: 20%;
+            top: 50%;
+            left: 50%;
+            width: 30%;
             height: 10%;
             transform: translateX(-50%);
             border: none;
@@ -104,6 +89,26 @@
             transition: background-color 0.5s ease,
             color 0.5s ease;
         }
+        #btn1:hover{
+            background-color: rgb(217,122,255);
+            color: white;
+        }
+        #btn3{
+            position: fixed;
+            top: 85%;
+            left: 35%;
+            width: 20%;
+            height: 10%;
+            transform: translateX(-50%);
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(229, 189, 255);
+            color: rgb(255, 255, 255);
+            transition: background-color 0.5s ease;
+        }
+        #btn3:hover{
+            background-color: rgb(217, 135, 255);
+        }
     </style>
     <script>
         document.addEventListener("contextmenu",function(NoCtm){
@@ -111,26 +116,20 @@
         })
         function btn1_z() {
             let btn1 = document.getElementById("btn1");
-            btn1.style.backgroundColor = "rgb(150,0,255)";
+            btn1.style.backgroundColor = "rgb(100,0,200)";
             btn1.style.color = "white";
             let btn3 = document.getElementById("btn3");
-            btn3.style.backgroundColor = "rgb(230,230,230)"
-            if (btn1.style.backgroundColor = "rgb(150,0,255)") {
-                btn3.style.backgroundColor = "rgb(142,0,207)";
-                btn3.style.color = "white";
-            }
         }
     </script>
 </head>
 <body>
     <div id="div_id1">
-        <h1 id="text1">安装Ghvswebtpc</h1>
-        <img src="../SystemLogo.png" alt="系统图标" id="image1">
+        <h1 id="text1">设置Ghvswebtpc</h1>
         <p id="text2">Ghvswebtpc</p>
-        <h2 id="text3">选择语言</h2>
-        <button id="btn1" onclick="btn1_z();">简体中文</button>
-        <button id="btn2" onclick="window.location.href='../index.html'">返回</button>
-        <button id="btn3" onclick="window.location.href='./Install2.html'">下一步</button>
+        <h2 id="text3">选择进入方式</h2>
+        <button id="btn1" onclick="btn1_z()">登录后进入桌面</button>
+        <button id="btn2" onclick="window.location.href='Install8.html'">下一步</button>
+        <button id="btn3" onclick="window.location.href='Install1.html'">重新安装</button>
     </div>
 </body>
 </html>

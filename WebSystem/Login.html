@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../SystemLogo.png">
+    <title>Ghvswebtpc</title>
+    <style>
+        body{
+            background: linear-gradient(150deg,rgb(183,0,255),rgb(212,148,255),rgb(212,148,255));
+            background-attachment: fixed;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #image1{
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 20%;
+        }
+        #UserNameShow{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-weight: 200;
+        }
+        #btn1{
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 10%;
+            height: 4%;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(200, 117, 255);
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+        #btn1:hover{
+            background-color: rgb(172,82,232);
+        }
+    </style>
+</head>
+<body>
+    <img src="../UserIcon.png" alt="用户图标" id="image1">
+    <h1 id="UserNameShow"></h1>
+    <button id="btn1" onclick="NoneIfAL()">登录</button>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault();
+        })
+        let UserText = localStorage.getItem("User") || "Administrator";
+        document.getElementById("UserNameShow").innerText = UserText;
+        document.addEventListener("keydown",function(keynext){
+            if (keynext.key === "Enter"){
+            if (UserPwText === ""){
+                location.href="LoginLoad.html";
+            }
+            else{
+                location.href="LoginIPw.html";
+            }
+            }
+        })
+        let UserPwText = localStorage.getItem("UserPw") || "";
+        function NoneIfAL() {
+            if (UserPwText === ""){
+                location.href="LoginLoad.html";
+            }
+            else{
+                location.href="LoginIPw.html";
+            }
+        }
+    </script>
+</body>
+</html>

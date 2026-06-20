@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <style>
+        body{
+            background: linear-gradient(150deg,rgb(183, 0, 255),rgb(212, 148, 255),rgb(212, 148, 255));
+            background-attachment: fixed;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #btn1{
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            width: 20%;
+            height: 5%;
+            transform: translateX(-50%);
+            border: none;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            transition: background-color 0.5s ease,
+            color 0.5s ease;
+        }
+        #btn1:hover{
+            background-color: rgb(227, 168, 255);
+            color: white;
+        }
+        #btn2{
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            width: 20%;
+            height: 5%;
+            transform: translateX(-50%);
+            border: none;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            transition: background-color 0.5s ease,
+            color 0.5s ease;
+        }
+        #btn2:hover{
+            background-color: rgb(227, 168, 255);
+            color: white;
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1" onclick="window.location.href='./Load.html'">安装Ghvswebtpc</button>
+    <button id="btn2">直接体验Ghvswebtpc</button>
+</body>
+</html>

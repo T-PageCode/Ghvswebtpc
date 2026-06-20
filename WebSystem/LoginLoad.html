@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../SystemLogo.png">
+    <title>Ghvswebtpc</title>
+    <style>
+        body{
+            background: linear-gradient(150deg,rgb(183,0,255),rgb(212,148,255),rgb(212,148,255));
+            background-attachment: fixed;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #image1{
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 20%;
+        }
+        #UserNameShow{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-weight: 200;
+        }
+        #text1{
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-weight: 200;
+            font-size: 20px;
+        }
+        #div_id1{
+            position: absolute;
+            top: 62%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 10%;
+            height: 0.1%;
+            background-color: rgb(255, 255, 255);
+            animation: divani1 .5s infinite alternate;
+            color: rgb(255,255,255)
+        }
+        @keyframes divani1{
+            from {
+                transform: translate(0%);
+            }   
+            to {
+                transform: translate(-80%,50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="../UserIcon.png" alt="用户图标" id="image1">
+    <h1 id="UserNameShow"></h1>
+    <p id="text1">正在进入桌面</p>
+    <div id="div_id1"></div>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault();
+        })
+        let UserText = localStorage.getItem("User") || "Administrator";
+        document.getElementById("UserNameShow").innerText = UserText;
+    </script>
+</body>
+</html>

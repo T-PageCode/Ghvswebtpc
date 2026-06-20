@@ -25,6 +25,25 @@
             font-size: 15px;
             overflow: hidden;
         }
+        #div_id2{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 25%;
+            height: 0.1%;
+            background-color: rgb(0, 0, 0);
+            animation: divani1 .5s infinite alternate;
+            color: rgb(255,255,255)
+        }
+        @keyframes divani1{
+            from {
+                transform: translate(0%);
+            }   
+            to {
+                transform: translate(-80%,50%);
+            }
+        }
         #text1{
             position: fixed;
             top: 5%;
@@ -46,10 +65,11 @@
         }
         #text3{
             position: fixed;
-            top: 20%;
+            top: 30%;
             left: 50%;
             transform: translateX(-50%);
             font-weight: 200;
+            white-space: nowrap;
         }
         #image1{
             position: fixed;
@@ -59,67 +79,28 @@
         }
         #btn1{
             position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 40%;
-            height: 10%;
-            transform: translateX(-50%);
-            border: none;
-            border-radius: 10px;
-            background-color: rgb(230, 230, 230);
-            color: rgb(0, 0, 0);
-            transition: background-color 0.5s ease,
-            color 0.5s ease;
-        }
-        #btn1:hover{
-            background-color: rgb(217, 122, 255);
-            color: white;
-        }
-        #btn2{
-            position: fixed;
             top: 85%;
-            left: 35%;
+            left: 50%;
             width: 20%;
             height: 10%;
             transform: translateX(-50%);
             border: none;
             border-radius: 10px;
-            background-color: rgb(193, 100, 255);
             color: rgb(255, 255, 255);
+            background-color: rgb(193, 0, 255);
             transition: background-color 0.5s ease;
         }
-        #btn2:hover{
-            background-color: rgb(142, 0, 207);
-        }
-        #btn3{
-            position: fixed;
-            top: 85%;
-            left: 65%;
-            width: 20%;
-            height: 10%;
-            transform: translateX(-50%);
-            border: none;
-            border-radius: 10px;
-            color: rgb(0, 0, 0);
-            transition: background-color 0.5s ease,
-            color 0.5s ease;
+        #btn1:hover{
+            background-color: rgb(142,0,207)
         }
     </style>
     <script>
         document.addEventListener("contextmenu",function(NoCtm){
             NoCtm.preventDefault()
         })
-        function btn1_z() {
-            let btn1 = document.getElementById("btn1");
-            btn1.style.backgroundColor = "rgb(150,0,255)";
-            btn1.style.color = "white";
-            let btn3 = document.getElementById("btn3");
-            btn3.style.backgroundColor = "rgb(230,230,230)"
-            if (btn1.style.backgroundColor = "rgb(150,0,255)") {
-                btn3.style.backgroundColor = "rgb(142,0,207)";
-                btn3.style.color = "white";
-            }
-        }
+        setTimeout(() => {
+            location.href="Install6.html"
+        },10000)
     </script>
 </head>
 <body>
@@ -127,10 +108,9 @@
         <h1 id="text1">安装Ghvswebtpc</h1>
         <img src="../SystemLogo.png" alt="系统图标" id="image1">
         <p id="text2">Ghvswebtpc</p>
-        <h2 id="text3">选择语言</h2>
-        <button id="btn1" onclick="btn1_z();">简体中文</button>
-        <button id="btn2" onclick="window.location.href='../index.html'">返回</button>
-        <button id="btn3" onclick="window.location.href='./Install2.html'">下一步</button>
+        <h2 id="text3">正在安装Ghvswebtpc，请稍等...</h2>
+        <button id="btn1" onclick="window.location.href='./Install4.html'">返回</button>
+        <div id="div_id2"></div>
     </div>
 </body>
 </html>

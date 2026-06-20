@@ -25,6 +25,25 @@
             font-size: 15px;
             overflow: hidden;
         }
+        #div_id2{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 25%;
+            height: 0.1%;
+            background-color: rgb(0, 0, 0);
+            animation: divani1 .5s infinite alternate;
+            color: rgb(255,255,255)
+        }
+        @keyframes divani1{
+            from {
+                transform: translate(0%);
+            }   
+            to {
+                transform: translate(-80%,50%);
+            }
+        }
         #text1{
             position: fixed;
             top: 5%;
@@ -46,10 +65,17 @@
         }
         #text3{
             position: fixed;
-            top: 20%;
+            top: 10%;
             left: 50%;
             transform: translateX(-50%);
             font-weight: 200;
+        }
+        #text4{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 18px;
         }
         #image1{
             position: fixed;
@@ -58,24 +84,6 @@
             height: 15%;
         }
         #btn1{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 40%;
-            height: 10%;
-            transform: translateX(-50%);
-            border: none;
-            border-radius: 10px;
-            background-color: rgb(230, 230, 230);
-            color: rgb(0, 0, 0);
-            transition: background-color 0.5s ease,
-            color 0.5s ease;
-        }
-        #btn1:hover{
-            background-color: rgb(217, 122, 255);
-            color: white;
-        }
-        #btn2{
             position: fixed;
             top: 85%;
             left: 35%;
@@ -88,8 +96,8 @@
             color: rgb(255, 255, 255);
             transition: background-color 0.5s ease;
         }
-        #btn2:hover{
-            background-color: rgb(142, 0, 207);
+        #btn1:hover{
+            background-color: rgb(142,0,207)
         }
         #btn3{
             position: fixed;
@@ -100,26 +108,18 @@
             transform: translateX(-50%);
             border: none;
             border-radius: 10px;
-            color: rgb(0, 0, 0);
-            transition: background-color 0.5s ease,
-            color 0.5s ease;
+            color: rgb(255, 255, 255);
+            background-color: rgb(193, 100, 255);
+            transition: background-color 0.5s ease;
+        }
+        #btn3:hover{
+            background-color: rgb(142,0,207);
         }
     </style>
     <script>
         document.addEventListener("contextmenu",function(NoCtm){
             NoCtm.preventDefault()
         })
-        function btn1_z() {
-            let btn1 = document.getElementById("btn1");
-            btn1.style.backgroundColor = "rgb(150,0,255)";
-            btn1.style.color = "white";
-            let btn3 = document.getElementById("btn3");
-            btn3.style.backgroundColor = "rgb(230,230,230)"
-            if (btn1.style.backgroundColor = "rgb(150,0,255)") {
-                btn3.style.backgroundColor = "rgb(142,0,207)";
-                btn3.style.color = "white";
-            }
-        }
     </script>
 </head>
 <body>
@@ -127,10 +127,15 @@
         <h1 id="text1">安装Ghvswebtpc</h1>
         <img src="../SystemLogo.png" alt="系统图标" id="image1">
         <p id="text2">Ghvswebtpc</p>
-        <h2 id="text3">选择语言</h2>
-        <button id="btn1" onclick="btn1_z();">简体中文</button>
-        <button id="btn2" onclick="window.location.href='../index.html'">返回</button>
-        <button id="btn3" onclick="window.location.href='./Install2.html'">下一步</button>
+        <h2 id="text3">请阅读声明</h2>
+        <p id="text4">本系统是依靠Web技术(HTML,CSS,JS)创造的。<br>
+            旨在用前端技术来实现类似系统的网页，请勿当成真正的系统！<br>
+            本系统中不包含广告，如有广告可能是第三方强制插入广告或是修改版。<br>
+            此网站发布依靠GitHub(GitHub的GitHub Pages)<br>
+            <span style="opacity: 0.5;">GitHub:T-PageCode</span>
+        </p>
+        <button id="btn1" onclick="window.location.href='./Install2.html'">返回</button>
+        <button id="btn3" onclick="window.location.href='./Install5.html'">安装</button>
     </div>
 </body>
 </html>

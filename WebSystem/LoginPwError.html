@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../SystemLogo.png">
+    <title>Ghvswebtpc</title>
+    <style>
+        body{
+            background: linear-gradient(150deg,rgb(183,0,255),rgb(212,148,255),rgb(212,148,255));
+            background-attachment: fixed;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #image1{
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 20%;
+        }
+        #UserNameShow{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-weight: 200;
+        }
+        #text1{
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-weight: 200;
+        }
+        #btn1{
+            position: fixed;
+            top: 62%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 10%;
+            height: 4%;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(200, 117, 255);
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+        #btn1:hover{
+            background-color: rgb(172,82,232);
+        }
+    </style>
+</head>
+<body>
+    <img src="../UserIcon.png" alt="用户图标" id="image1">
+    <h1 id="UserNameShow"></h1>
+    <p id="text1">密码错误，请重试</p>
+    <button id="btn1" onclick="Next()">确定</button>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault();
+        })
+        let ipt1 = document.getElementById("ipt1");
+        let UserText = localStorage.getItem("User") || "Administrator";
+        document.getElementById("UserNameShow").innerText = UserText;
+        function Next(){
+            location.href="LoginIPw.html"
+        }
+        document.addEventListener("keydown",function(keyd){
+            if (keyd.key === "Enter"){
+                keyd.preventDefault()
+                Next()
+            }
+        })
+    </script>
+</body>
+</html>
