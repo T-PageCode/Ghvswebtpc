@@ -65,7 +65,7 @@
             }
             }
         })
-        let UserPwText = localStorage.getItem("UserPw") || "";
+        let UserPwText = (localStorage.getItem("UserPw") || "").trim();
         function NoneIfAL() {
             if (UserPwText === ""){
                 location.href="LoginLoad.html";

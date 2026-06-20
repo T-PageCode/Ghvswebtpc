@@ -135,7 +135,7 @@
             let btn3 = document.getElementById("btn3");
         }
         function NextPw(){
-            let UserPassword = document.getElementById("ipt1").value;
+            let UserPassword = document.getElementById("ipt1").value.trim();
             localStorage.setItem("UserPw",UserPassword);
             location.href="Szjm.html"
         }
