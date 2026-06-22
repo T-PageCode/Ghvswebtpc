@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <style>
+        body{
+            background-image: url(../BackGroundImage.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #div_id1{
+            position: fixed;
+            top: 97%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            height: 5%;
+        }
+        #div_id2{
+            position: fixed;
+            top: 50%;
+            left: 40%;
+        }
+        #text1{
+            position: fixed;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-weight: 200;
+            background: linear-gradient(90deg,
+            rgb(209, 152, 255),rgb(153, 0, 255),
+            rgb(234, 202, 255),rgb(140, 0, 255));
+            font-size: 25px;
+            background-size: 200% 100%;
+            background-position: 0% 50%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: background-position 0.8s ease,
+            transform 0.5s ease;
+        }
+        #text1:hover{
+            background-position: 100% 50%;
+            transform: translate(-50%,-50%) scale(1.3);
+        }    
+        #image1{
+            position: fixed;
+            top: 50%;
+            left: 5%;
+            transform: translate(-50%,-50%);
+            height: 90%;
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+    </script>
+</head>
+<body>
+    <div id="div_id1">
+        <img id="image1" src="../SystemLogo.png" alt="系统图标">
+        <p id="text1">Hello</p>
+        <div id="div_id2">?</div>
+    </div>
+</body>
+</html>

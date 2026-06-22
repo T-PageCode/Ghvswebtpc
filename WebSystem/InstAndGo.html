@@ -14,7 +14,7 @@
         }
         #btn1{
             position: fixed;
-            top: 60%;
+            top: 40%;
             left: 50%;
             width: 20%;
             height: 5%;
@@ -32,7 +32,7 @@
         }
         #btn2{
             position: fixed;
-            top: 40%;
+            top: 50%;
             left: 50%;
             width: 20%;
             height: 5%;
@@ -48,6 +48,24 @@
             background-color: rgb(227, 168, 255);
             color: white;
         }
+        #btn3{
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            width: 20%;
+            height: 5%;
+            transform: translateX(-50%);
+            border: none;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            transition: background-color 0.5s ease,
+            color 0.5s ease;
+        }
+        #btn3:hover{
+            background-color: rgb(227, 168, 255);
+            color: white;
+        }
     </style>
     <script>
         document.addEventListener("contextmenu",function(NoCtm){
@@ -58,5 +76,6 @@
 <body>
     <button id="btn1" onclick="window.location.href='./Load.html'">安装Ghvswebtpc</button>
     <button id="btn2" onclick="window.location.href='./Login.html'">直接体验Ghvswebtpc</button>
+    <button id="btn3" onclick="window.location.href='../index.html'">返回介绍页</button>
 </body>
 </html>

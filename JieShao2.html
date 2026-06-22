@@ -49,6 +49,7 @@
             font-weight: 200;
             font-size: 50px;
             color: white;
+            white-space: nowrap;
         }
         #text3{
             position: fixed;
@@ -62,10 +63,23 @@
             word-break: break-all;
             line-height: 1.5;
         }
+        #ul1{
+            position: fixed;
+            top: 27%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 23px;
+            font-weight: 200;
+            width: 320px;
+            word-break: break-all;
+            line-height: 1.5;
+        }
         #btn1{
             position: fixed;
             top: 90%;
-            left: 25%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             width: 25%;
             height: 8%;
             color: white;
@@ -78,22 +92,6 @@
         #btn1:hover{
             background-color:rgb(212, 0, 255);
         }
-        #btn2{
-            position: fixed;
-            top: 90%;
-            left: 55%;
-            width: 25%;
-            height: 8%;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            background-color:rgb(149, 0, 179);
-            transition: background-color 0.5s ease;
-            font-size: 15px;
-        }
-        #btn2:hover{
-            background-color:rgb(212, 0, 255);
-        }
     </style>
     <script>
         document.addEventListener("contextmenu",function(No_BrYM) {
@@ -104,18 +102,18 @@
 <body>
     <h1 id="text1">Ghvswebtpc</h1>
     <div id="div_id1">
-        <h1 id="text2">简介</h1>
+        <h1 id="text2">替代Cwtpc</h1>
         <p id="text3">
-            Ghvswebtpc是GitHub:T-PageCode的网页模拟系统项目<br>
-            Gh=GitHub(在GitHub发布)<br>
-            vs=Visual Studio和Visual Studio Code(这是编写的工具)<br>
-            web=网页体验(只需要在浏览器访问网站)<br>
-            tpc=GitHub名称T-PageCode缩写。<br>
-            这与名称相似的网站和公司，软件等没有任何关系。<br>
-            <span style="font-size: 15px;opacity: 0.7;font-weight: 200;">T-PageCode是GitHub用户名</span>
+            Cwtpc已于2026/5/20停止支持<br>
+            Ghvswebtpc相比Cwtpc做了很大的改变:<br>
         </p>
-        <button id="btn1" onclick="window.location.href='index.html'">上一页</button>
-        <button id="btn2" onclick="window.location.href='JieShao2.html'">下一页</button>
+        <ul id="ul1">
+            <li>增加了安装界面</li>
+            <li>可以设置用户名和密码</li>
+            <li>登录界面增加了完整的判断逻辑</li>
+            <li>UI升级,增加纯净模式</li>
+        </ul>
+        <button id="btn1" onclick="window.location.href='JieShao1.html'">上一页</button>
     </div>
 </body>
 </html>
