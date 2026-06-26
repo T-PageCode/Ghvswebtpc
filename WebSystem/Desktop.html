@@ -14,6 +14,9 @@
             -moz-user-select: none;
             -webkit-user-select: none;
             user-select: none;
+            padding: 0;
+            width: 100%;
+            overflow: hidden;
         }
         #div_id1{
             position: fixed;
@@ -24,6 +27,20 @@
             border-radius: 10px;
             width: 90%;
             height: 5%;
+        }
+        #div_id3{
+            position: fixed;
+            top: 50%;
+            left: 27%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            width: 8%;
+            height: 80%;
+            border-radius: 10px;
+            transition: background-color 0.5s ease;
+        }
+        #div_id3:hover{
+            background-color: rgb(218, 218, 218);
         }
         #text1{
             position: fixed;
@@ -70,9 +87,60 @@
         #image2{
             position: fixed;
             top: 50%;
-            left: 25%;
+            left: 50%;
             transform: translate(-50%,-50%);
             height: 150%;
+        }
+        #iframe1{
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            height: 90%;
+            border: none;
+        }
+        #window1{
+            visibility: hidden;
+            opacity: 0;
+        }
+        #window1.show{
+            visibility: visible;
+            opacity: 1;
+        }
+        .window{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(255, 255, 255);
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-sizing: border-box;
+            transition: visibility 0.3s ease,
+            opacity 0.3s ease;
+        }
+        .window_close{
+            position: fixed;
+            top: 5%;
+            left: 5%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            width: 10%;
+            height: 10%;
+            transition: background-color 0.5s ease,
+            text 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 200;
+        }
+        .window_close:hover{
+            background-color: rgb(153, 0, 255);
+            color: white;
         }
     </style>
     <script>
@@ -84,10 +152,18 @@
 <body>
     <div id="div_id1">
         <img id="image1" src="../SystemLogo.png" alt="系统图标">
-        <img id="image2" src="../PerImage.png" alt="个性化">
+        <div id="div_id3" onclick="GxhShow()">
+            <img id="image2" src="../GxhImage.png" alt="个性化">
+        </div>
         <p id="text1">Hello</p>
         <p id="text2"></p>
         <p id="text3"></p>
+    </div>
+    <div class="window" id="window1">
+        <div class="window_close" onclick="NoShowGxh()">
+            <p>×</p>
+        </div>
+        <iframe src="./Gxh.html" id="iframe1"></iframe>
     </div>
     <script>
         const pad = n => n < 10 ? "0" + n : n
@@ -104,8 +180,19 @@
             document.getElementById("text2").innerText = timeText_text2;
             document.getElementById("text3").innerText = timeText_text3;
         }
-        updateTime()
-        setInterval(updateTime,1000)
+        updateTime();
+        setInterval(updateTime,1000);
+        function GxhShow() {
+            document.getElementById("window1").classList.add("show")
+        }
+        function NoShowGxh() {
+            document.getElementById("window1").classList.remove("show")
+        }
+        let body = document.body;
+        let GCsGetItem = localStorage.getItem("GCsColor") || "";
+        if (GCsGetItem === "black") {
+            body.style.backgroundImage = "url(../BackgroundBlackImage.png)";
+        }
     </script>
 </body>
 </html>

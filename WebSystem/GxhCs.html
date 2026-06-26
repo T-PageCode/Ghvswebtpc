@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <style>
+        body{
+            background-color: white;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #text1{
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: black;
+            font-size: 20px;
+            font-weight: 200;
+        }
+        #text2{
+            position: fixed;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: black;
+            font-size: 20px;
+            font-weight: 200;
+        }
+        #btn1{
+            position: fixed;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 15%;
+            height: 10%;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(192, 84, 255);
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+        #btn1:hover{
+            background-color: rgb(162, 0, 255)
+        }
+        #div_id1{
+            position: fixed;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+    </script>
+</head>
+<body>
+    <h1 id="text1">个性化 - 纯色</h1>
+    <div id="div_id1" onclick="GCs('black')"></div>
+    <p id="text2">黑色</p>
+    <button onclick="window.location.href='./Gxh.html'" id="btn1">返回</button>
+    <script>
+        function GCs(color) {
+            if (color === "black") {
+                localStorage.setItem("GCsColor","black");
+            }
+        }
+    </script>
+</body>
+</html>
