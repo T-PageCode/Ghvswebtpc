@@ -1,7 +1,6 @@
 # 在源码中，有很多可能不是很好懂的文件名。
 ##### JieShao1.html、JieShao2.html是介绍(JieShao)的拼音。
 ##### 带_cj的是纯净界面，而_cj的cj刚好是纯净(ChuenJing)的拼音缩写。
-##### Cs是纯色(ChuenSe)的拼音缩写
 ##### Gxh是个性化(GeXingHua)的拼音缩写。
 ##### Ghvswebtpc含义:
 ###### Gh = GitHub(在GitHub发布)

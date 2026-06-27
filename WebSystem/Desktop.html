@@ -190,13 +190,13 @@
         }
         function QHImage() {
             let body = document.body;
-            let GBimageGetItem = localStorage.getItem("GBImage") || "";
-            let GCsGetItem = localStorage.getItem("GCsColor") || "";
-            if (GBimageGetItem === "default") {
-                body.style.backgroundImage = 'url(../BackGroundImage.png)';
-            }
-            else if (GCsGetItem === "black") {
+            let GBgGetItem = localStorage.getItem("GBg") || "";
+            if (GBgGetItem === "black") {
                 body.style.backgroundImage = 'url(../BackgroundBlackImage.PNG)';
+            }
+            else if (GBgGetItem === "default") {
+                localStorage.removeItem("GCsColor");
+                body.style.backgroundImage = 'url(../BackGroundImage.png)';
             }
             else {
                 body.style.backgroundImage = 'url(../BackGroundImage.png)';
