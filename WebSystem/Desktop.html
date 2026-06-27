@@ -194,10 +194,14 @@
             let GBimageGetItem = localStorage.getItem("GBImage") || "";
             let GCsGetItem = localStorage.getItem("GCsColor") || "";
             if (GBimageGetItem === "default") {
-                body.style.backgroundImage = "url(../BackGroundImage.png)";
+                body.style.backgroundImage = 'url(../BackGroundImage.png)';
             }
             else if (GCsGetItem === "black") {
-                body.style.backgroundImage = "url(../BackGroundBlackImage.png)";
+                body.style.backgroundImage = 'url(../BackGroundBlackImage.PNG)';
+            }
+            else {
+                body.style.backgroundImage = 'url(../BackGroundImage.png)';
+                localStorage.setItem("GBImage", "default");
             }
         }
         QHImage();
