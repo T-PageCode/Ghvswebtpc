@@ -119,7 +119,9 @@
             overflow: hidden;
             box-sizing: border-box;
             transition: visibility 0.3s ease,
-            opacity 0.3s ease;
+            opacity 0.3s ease,
+            width 0.5s ease,
+            height 0.5s ease;
         }
         .window_close{
             position: fixed;
@@ -141,6 +143,24 @@
             background-color: rgb(153, 0, 255);
             color: white;
         }
+        .window_max{
+            position: fixed;
+            top: 5%;
+            left: 15%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            width: 10%;
+            height: 10%;
+            transition: background-color 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 200;
+        }
+        .window_max:hover{
+            background-color: rgb(226, 226, 226);
+        }
     </style>
     <script>
         document.addEventListener("contextmenu",function(NoCtm){
@@ -161,6 +181,9 @@
     <div class="window" id="window1">
         <div class="window_close" onclick="NoShowGxh()">
             <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax()">
+            <p>↔</p>
         </div>
         <iframe src="./Gxh.html" id="iframe1" sandbox="allow-scripts 
         allow-top-navigation-by-user-activation allow-same-origin"></iframe>
@@ -187,6 +210,17 @@
         }
         function NoShowGxh() {
             document.getElementById("window1").classList.remove("show")
+        }
+        function windowMax() {
+            let window1 = document.getElementById("window1");
+            if (window1.style.width === "500px" & window1.style.height === "300px") {
+                window1.style.width = "100vw";
+                window1.style.height = "100vh";
+            }
+            else {
+                window1.style.width = "500px";
+                window1.style.height = "300px";
+            }
         }
         function QHImage() {
             let body = document.body;
