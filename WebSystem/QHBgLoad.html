@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../SystemLogo.png">
+    <title>Ghvswebtpc</title>
+    <style>
+        body{
+            background-image: url(../BackGroundImage.png);
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #text1{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-size: 30px;
+            font-weight: 200;
+            white-space: nowrap;
+        }
+        #div_id1{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 25%;
+            height: 0.1%;
+            background-color: rgb(255, 255, 255);
+            animation: divani1 .5s infinite alternate;
+            color: rgb(255,255,255)
+        }
+        @keyframes divani1{
+            from {
+                transform: translate(0%);
+            }   
+            to {
+                transform: translate(-80%,50%);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault();
+        })
+        setTimeout(() => {
+             location.href="Desktop.html";
+        },2000)
+    </script>
+</head>
+<body>
+    <h1 id="text1">正在切换壁纸，请稍后...</h1>
+    <div id="div_id1"></div>
+</body>
+</html>

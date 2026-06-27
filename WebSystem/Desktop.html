@@ -151,7 +151,7 @@
 </head>
 <body>
     <div id="div_id1">
-        <img id="image1" src="../SystemLogo.png" alt="系统图标">
+        <img id="image1" src="../SystemLogo.png" alt="系统图标" onclick="">
         <div id="div_id3" onclick="GxhShow()">
             <img id="image2" src="../GxhImage.png" alt="个性化">
         </div>
@@ -163,7 +163,8 @@
         <div class="window_close" onclick="NoShowGxh()">
             <p>×</p>
         </div>
-        <iframe src="./Gxh.html" id="iframe1"></iframe>
+        <iframe src="./Gxh.html" id="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
     </div>
     <script>
         const pad = n => n < 10 ? "0" + n : n
@@ -188,11 +189,29 @@
         function NoShowGxh() {
             document.getElementById("window1").classList.remove("show")
         }
-        let body = document.body;
-        let GCsGetItem = localStorage.getItem("GCsColor") || "";
-        if (GCsGetItem === "black") {
-            body.style.backgroundImage = "url(../BackgroundBlackImage.png)";
+        function pageload() {
+            localStorage.setItem("LoadTag","1");
+            location.reload();
         }
+        function QHImage() {
+            let body = document.body;
+            let GBimageGetItem = localStorage.getItem("GBImage") || "";
+            let GCsGetItem = localStorage.getItem("GCsColor") || "";
+            let RT = localStorage.getItem("LoadTag")
+            if (GCsGetItem === "black") {
+                localStorage.setItem("GBImage","");
+            }
+            if (GBimageGetItem === "default") {
+                localStorage.setItem("GCsColor","");
+            }
+            if (GBimageGetItem === "default") {
+                body.style.backgroundImage = "url(../BackgroundImage.png)";
+            }
+            else if (GCsGetItem === "black") {
+                body.style.backgroundImage = "url(../BackgroundBlackImage.png)";
+            }
+        }
+        QHImage();
     </script>
 </body>
 </html>
