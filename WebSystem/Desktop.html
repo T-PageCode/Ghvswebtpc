@@ -189,21 +189,10 @@
         function NoShowGxh() {
             document.getElementById("window1").classList.remove("show")
         }
-        function pageload() {
-            localStorage.setItem("LoadTag","1");
-            location.reload();
-        }
         function QHImage() {
             let body = document.body;
             let GBimageGetItem = localStorage.getItem("GBImage") || "";
             let GCsGetItem = localStorage.getItem("GCsColor") || "";
-            let RT = localStorage.getItem("LoadTag")
-            if (GCsGetItem === "black") {
-                localStorage.setItem("GBImage","");
-            }
-            if (GBimageGetItem === "default") {
-                localStorage.setItem("GCsColor","");
-            }
             if (GBimageGetItem === "default") {
                 body.style.backgroundImage = "url(../BackGroundImage.png)";
             }
