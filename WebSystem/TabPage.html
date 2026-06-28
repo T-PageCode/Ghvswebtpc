@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新标签页</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <style>
+        body{
+            background-color: white;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #text1{
+            position: fixed;
+            top: 40%;
+            left: 60%;
+            transform: translate(-50%,-50%);
+            font-size: 25px;
+            font-weight: 200;
+        }
+        #image1{
+            position: fixed;
+            top: 40%;
+            left: 40%;
+            transform: translate(-50%,-50%);
+            height: 20%;
+        }
+        #input1{
+            position: fixed;
+            top: 70%;
+            left: 45%;
+            transform: translate(-50%,-50%);
+            width: 40%;
+            height: 30px;
+            border: 2px solid rgb(212, 142, 255);
+            border-radius: 10px;
+            background-color: rgb(228, 199, 255);
+            color: white;
+            font-size: 20px;
+        }
+        #input1:focus{
+            outline: none;
+            border-color: rgb(140, 0, 255);
+        }
+        #input1::placeholder{
+            color:rgb(212, 142, 255);
+        }
+        #btn1{
+            position: fixed;
+            top: 70%;
+            left: 72%;
+            transform: translate(-50%,-50%);
+            width: 10%;
+            height: 30px;
+            background-color:rgb(212, 159, 255);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+        #btn1:hover{
+            background-color: rgb(161, 46, 255);
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+    </script>
+</head>
+<body>
+    <img src="../BrowserImage.png" id="image1">
+    <h1 id="text1">Ghtpcbrowser</h1>
+    <input id="input1" placeholder="输入URL">
+    <button id="btn1" onclick="SrcFW()">前往</button>
+    <script>
+        function SrcFW() {
+            let input1 = document.getElementById("input1");
+            let ipt1i = input1.value;
+            location.href = ipt1i;
+        }
+        document.addEventListener("keydown",(key) => {
+            if (key.key === "Enter") {
+                SrcFW();
+            }
+        })
+    </script>
+</body>
+</html>

@@ -19,18 +19,17 @@
         }
         #div_id1{
             position: fixed;
-            top: 97%;
             left: 50%;
+            top: 96%;
             transform: translate(-50%,-50%);
-            background-color: white;
+            background-color: rgb(255,255,255);
             border-radius: 10px;
             width: 90%;
             height: 5%;
         }
-        #div_id3{
+        .div_class1{
             position: fixed;
             top: 50%;
-            left: 27%;
             transform: translate(-50%,-50%);
             background-color: white;
             width: 8%;
@@ -38,8 +37,14 @@
             border-radius: 10px;
             transition: background-color 0.5s ease;
         }
-        #div_id3:hover{
+        .div_class1:hover{
             background-color: rgb(218, 218, 218);
+        }
+        #div_id2{
+            left: 27%;
+        }
+        #div_id3{
+            left: 36%;
         }
         #text1{
             position: fixed;
@@ -83,14 +88,14 @@
             transform: translate(-50%,-50%);
             height: 90%;
         }
-        #image2{
+        .image2{
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
             height: 150%;
         }
-        #iframe1{
+        .iframe1{
             position: fixed;
             top: 55%;
             left: 50%;
@@ -103,7 +108,15 @@
             visibility: hidden;
             opacity: 0;
         }
-        #window1.show{
+        #window1.Gxhshow{
+            visibility: visible;
+            opacity: 1;
+        }
+        #window2{
+            visibility: hidden;
+            opacity: 0;
+        }
+        #window2.Browsershow{
             visibility: visible;
             opacity: 1;
         }
@@ -118,21 +131,23 @@
             border-radius: 10px;
             overflow: hidden;
             box-sizing: border-box;
+            box-shadow: 0 0 0px rgb(0,0,0);
             transition: visibility 0.3s ease,
             opacity 0.3s ease,
             width 0.5s ease,
-            height 0.5s ease;
+            height 0.5s ease,
+            box-shadow 0.5s ease;
         }
         .window_close{
             position: fixed;
             top: 5%;
-            left: 5%;
+            left: 4.9%;
             transform: translate(-50%,-50%);
             background-color: white;
             width: 10%;
             height: 10%;
             transition: background-color 0.5s ease,
-            text 0.5s ease;
+            color 0.5s ease;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -146,7 +161,7 @@
         .window_max{
             position: fixed;
             top: 5%;
-            left: 15%;
+            left: 14.9%;
             transform: translate(-50%,-50%);
             background-color: white;
             width: 10%;
@@ -170,9 +185,12 @@
 </head>
 <body>
     <div id="div_id1">
-        <img id="image1" src="../SystemLogo.png" alt="系统图标" onclick="">
-        <div id="div_id3" onclick="GxhShow()">
-            <img id="image2" src="../GxhImage.png" alt="个性化">
+        <img id="image1" src="../SystemLogo.png" alt="系统图标">
+        <div class="div_class1" onclick="GxhShow()" id="div_id2">
+            <img class="image2" src="../GxhImage.png" alt="个性化">
+        </div>
+        <div class="div_class1" id="div_id3" onclick="BrowserShow()">
+            <img class="image2" src="../BrowserImage.png" alt="Ghtpcbrowser">
         </div>
         <p id="text1">Hello</p>
         <p id="text2"></p>
@@ -182,10 +200,20 @@
         <div class="window_close" onclick="NoShowGxh()">
             <p>×</p>
         </div>
-        <div class="window_max" onclick="windowMax()">
+        <div class="window_max" onclick="windowMax1()">
             <p>↔</p>
         </div>
-        <iframe src="./Gxh.html" id="iframe1" sandbox="allow-scripts 
+        <iframe src="./Gxh.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div class="window" id="window2">
+        <div class="window_close" onclick="NoShowBrowser()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax2()">
+            <p>↔</p>
+        </div>
+        <iframe src="./Browser.html" class="iframe1" sandbox="allow-scripts 
         allow-top-navigation-by-user-activation allow-same-origin"></iframe>
     </div>
     <script>
@@ -203,15 +231,38 @@
             document.getElementById("text2").innerText = timeText_text2;
             document.getElementById("text3").innerText = timeText_text3;
         }
+        let maxZIndex = 1;
         updateTime();
         setInterval(updateTime,1000);
         function GxhShow() {
-            document.getElementById("window1").classList.add("show")
+            maxZIndex++;
+            let window1 = document.getElementById("window1");
+            window1.style.zIndex = maxZIndex;
+            window1.style.boxShadow = "0 0 10px rgb(0,0,0)"
+            window1.classList.add("Gxhshow");
+            setTimeout(() => {
+                window1.style.boxShadow = "0 0 0px rgb(0,0,0)";
+            },1000)
         }
         function NoShowGxh() {
-            document.getElementById("window1").classList.remove("show")
+            let window1 = document.getElementById("window1");
+            window1.classList.remove("Gxhshow");
         }
-        function windowMax() {
+        function BrowserShow() {
+            maxZIndex++;
+            let window2 = document.getElementById("window2");
+            window2.style.zIndex = maxZIndex;
+            window2.style.boxShadow = "0 0 10px rgb(0,0,0)"
+            window2.classList.add("Browsershow");
+            setTimeout(() => {
+                window2.style.boxShadow = "0 0 0px rgb(0,0,0)";
+            },1000)
+        }
+        function NoShowBrowser() {
+            let window2 = document.getElementById("window2");
+            window2.classList.remove("Browsershow");
+        }
+        function windowMax1() {
             let window1 = document.getElementById("window1");
             if (window1.style.width === "500px" && window1.style.height === "300px") {
                 window1.style.width = "100vw";
@@ -220,6 +271,17 @@
             else {
                 window1.style.width = "500px";
                 window1.style.height = "300px";
+            }
+        }
+        function windowMax2() {
+            let window2 = document.getElementById("window2");
+            if (window2.style.width === "500px" && window2.style.height === "300px") {
+                window2.style.width = "100vw";
+                window2.style.height = "100vh";
+            }
+            else {
+                window2.style.width = "500px";
+                window2.style.height = "300px";
             }
         }
         function QHImage() {
