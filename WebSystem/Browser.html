@@ -122,27 +122,30 @@
     </div>
     <iframe id="iframe1" src="./TabPage.html"></iframe>
     <script>
-    function SrcFW() {
-        let input1 = document.getElementById("input1");
-        let PageTitleText = document.getElementById("PageTitleText");
-        let ipt1i = input1.value.trim();
-        ipt1i = ipt1i.replaceAll("。", ".");
-        if (ipt1i === "ghtpcbr://newtabpage") {
-            iframe1.src = "./TabPage.html";
-        }
-        else {
-            iframe1.src = ipt1i;
-        }
+        function SrcFW() {
+            let input1 = document.getElementById("input1");
+            let PageTitleText = document.getElementById("PageTitleText");
+            let ipt1i = input1.value.trim();
+            ipt1i = ipt1i.replaceAll("。", ".");
+            if (ipt1i === "ghtpcbr://newtabpage") {
+                iframe1.src = "./TabPage.html";
+            }
+            else if (ipt1i === "ghtpcbr://newtabpage_black") {
+                iframe1.src = "./TabPage_Black.html";
+            }
+            else {
+                iframe1.src = ipt1i;
+            }
             iframe1.onload = function () {
-            try {
-                const PageTitle = iframe1.contentDocument.title;
-                PageTitleText.innerText = PageTitle;
-            } 
-            catch (err) {
-                PageTitleText.innerText = "标题无法获取";
+                try {
+                    const PageTitle = iframe1.contentDocument.title;
+                    PageTitleText.innerText = PageTitle;
+                }
+                catch (err) {
+                    PageTitleText.innerText = "标题无法获取";
+                }
             }
         }
-    }
     document.addEventListener("keydown",(key) => {
         if (key.key === "Enter") {
             SrcFW();
