@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ghvswebtpc</title>
     <link rel="icon" href="../SystemLogo.png">
     <style>
@@ -16,6 +17,21 @@
             padding: 0;
             width: 100%;
             overflow: hidden;
+        }
+        #CRM{
+            position: fixed;
+            z-index: 1000;
+            background-color: white;
+            border: 2px solid rgb(153, 0, 255);
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease,
+            visibility 0.3s ease,
+            top 0.3s ease,
+            left 0.3s ease;
         }
         #div_id1{
             position: fixed;
@@ -36,6 +52,9 @@
             height: 80%;
             border-radius: 10px;
             transition: background-color 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .div_class1:hover{
             background-color: rgb(218, 218, 218);
@@ -45,6 +64,29 @@
         }
         #div_id3{
             left: 36%;
+        }
+        #div_id4{
+            left: 59%;
+        }
+        #div_id5{
+            left: 68%;
+        }
+        #div_id6{
+            left: 77%;
+        }
+        #terminal_icon{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(196, 124, 255);
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
         }
         #text1{
             position: fixed;
@@ -81,12 +123,56 @@
             font-size: 20px;
             transform: translate(-50%,-50%);
         }
+        #h1N1{
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-weight: 200;
+            font-size: 30px;
+        }
+        #pN1{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-weight: 200;
+        }
+        #pN2{
+            position: fixed;
+            color: rgb(196, 124, 255);
+            font-size: 20px;
+        }
+        #h1N2{
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-weight: 200;
+            font-size: 30px;
+        }
         #image1{
             position: fixed;
             top: 50%;
             left: 5%;
             transform: translate(-50%,-50%);
             height: 90%;
+        }
+        #pN3{
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-weight: 200;
+            width: 300px;
+        }
+        #image2{
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            transform: translate(50%);
+            height: 90%;
+            border-radius: 10px;;
         }
         .image2{
             position: fixed;
@@ -103,6 +189,17 @@
             width: 100%;
             height: 90%;
             border: none;
+        }
+        #video1{
+            position: absolute;
+            top: 56%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            width: 100%;
+            height: 92%;
+            transition: height 0.5s ease;
         }
         #window1{
             visibility: hidden;
@@ -124,6 +221,56 @@
             visibility: visible;
             opacity: 1;
         }
+        #window3{
+            visibility: hidden;
+            opacity: 0;
+            width: 700px;
+            height: 500px;
+        }
+        #window3.TextEditorshow{
+            visibility: visible;
+            opacity: 1;
+        }
+        #window4{
+            visibility: hidden;
+            opacity: 0;
+            width: 500px;
+            height: 300px;
+        }
+        #window4.TextEditorHelpshow{
+            visibility: visible;
+            opacity: 1;
+        }
+        #window5{
+            visibility: hidden;
+            opacity: 0;
+            width: 500px;
+            height: 307px;
+        }
+        #window5.Ghvswebtpcshow{
+            visibility: visible;
+            opacity: 1;
+        }
+        #window6{
+            visibility: hidden;
+            opacity: 0;
+            width: 600px;
+            height: 400px;
+        }
+        #window6.Terminalshow{
+            visibility: visible;
+            opacity: 1;
+        }
+        #window7{
+            visibility: hidden;
+            opacity: 0;
+            width: 500px;
+            height: 300px;
+        }
+        #window7.TerminalHelpshow{
+            visibility: visible;
+            opacity: 1;
+        }
         .window{
             position: absolute;
             top: 50%;
@@ -133,7 +280,7 @@
             border-radius: 10px;
             overflow: hidden;
             box-sizing: border-box;
-            border: solid 0.1px rgb(209, 152, 255);
+            border: 1px solid rgb(209, 152, 255);
             transition: visibility 0.3s ease,
             opacity 0.3s ease,
             width 0.5s ease,
@@ -141,7 +288,7 @@
             box-shadow 0.5s ease;
         }
         .window_close{
-            position: fixed;
+            position: absolute;
             top: 5%;
             left: 4.9%;
             transform: translate(-50%,-50%);
@@ -161,7 +308,7 @@
             color: white;
         }
         .window_max{
-            position: fixed;
+            position: absolute;
             top: 5%;
             left: 14.9%;
             transform: translate(-50%,-50%);
@@ -178,14 +325,28 @@
         .window_max:hover{
             background-color: rgb(226, 226, 226);
         }
+        .window_help{
+            position: absolute;
+            top: 5%;
+            left: 24.9%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            width: 10%;
+            height: 10%;
+            transition: background-color 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 200;
+        }
+        .window_help:hover{
+            background-color: rgb(226, 226, 226);
+        }
     </style>
-    <script>
-        document.addEventListener("contextmenu",function(NoCtm){
-            NoCtm.preventDefault()
-        })
-    </script>
 </head>
 <body>
+    <div id="CRM"></div>
     <div id="div_id1">
         <img id="image1" src="../SystemLogo.png" alt="系统图标">
         <div class="div_class1" onclick="GxhShow()" id="div_id2">
@@ -193,6 +354,15 @@
         </div>
         <div class="div_class1" id="div_id3" onclick="BrowserShow()">
             <img class="image2" src="../BrowserImage.png" alt="Ghtpcbrowser">
+        </div>
+        <div class="div_class1" id="div_id4" onclick="TextEditorShow()">
+            <img id="image2" src="../TextEditorImage.png">
+        </div>
+        <div class="div_class1" id="div_id5" onclick="GhvswebtpcShow()">
+            <p id="pN2">Show</p>
+        </div>
+        <div class="div_class1" id="div_id6" onclick="TerminalShow()">
+            <div id="terminal_icon">>_</div>
         </div>
         <p id="text1">Hello</p>
         <p id="text2"></p>
@@ -225,10 +395,98 @@
         <div class="window_max" onclick="windowMax3()">
             <p>↔</p>
         </div>
-        <iframe src="./Browser.html" class="iframe1" sandbox="allow-scripts 
+        <div class="window_help" onclick="TextEditorHelpShow()">
+            <p>?</p>
+        </div>
+        <iframe src="./TextEditor.html" class="iframe1" sandbox="allow-scripts 
         allow-top-navigation-by-user-activation allow-same-origin"></iframe>
     </div>
+    <div class="window" id="window4">
+        <div class="window_close" onclick="NoShowTextEditorHelp()">
+            <p>×</p>
+        </div>
+        <h1 id="h1N1">帮助</h1>
+        <p id="pN1"><span style="font-size: 17.5px">使用说明</span><br>
+        点击屏幕任意处(除非按钮)，输入框会被选中，即可开始编辑。
+        </p>
+    </div>
+    <div class="window" id="window5">
+        <div class="window_close" onclick="NoShowGhvswebtpc()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax4()">
+            <p>↔</p>
+        </div>
+        <video src="../GhvswebtpcShow.mp4" type="video/mp4" controls preload="auto" id="video1"></video>
+        <div id="video_progress"></div>
+    </div>
+    <div class="window" id="window6">
+        <div class="window_close" onclick="NoShowTerminal()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax5()">
+            <p>↔</p>
+        </div>
+        <div class="window_help" onclick="TerminalHelpShow()">
+            <p>?</p>
+        </div>
+        <iframe src="./Terminal.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div class="window" id="window7">
+        <div class="window_close" onclick="NoShowTerminalHelp()">
+            <p>×</p>
+        </div>
+        <h1 id="h1N2">帮助</h1>
+        <p id="pN3"><span style="font-size: 17.5px">说明</span><br>
+        terminal color:white = 切换白色主题<br>
+        terminal color:black = 切换黑色主题<br>
+        clear terminal = 清除输出区<br>
+        hello ghvswebtpc = 介绍Ghvswebtpc，带互动❤<br>
+        help = 帮助
+        </p>
     <script>
+        const menuDom = document.getElementById("CRM");
+        document.addEventListener("contextmenu",(event) => {
+            event.preventDefault();
+            const x = event.clientX;
+            const y = event.clientY;
+            const maxW = window.innerWidth - menuDom.offsetWidth;
+            const maxH = window.innerHeight - menuDom.offsetHeight;
+            menuDom.style.left = `${Math.min(x, maxW)}px`;
+            menuDom.style.top = `${Math.min(y, maxH)}px`;
+            menuDom.style.visibility = "visible";
+            menuDom.style.opacity = "1";
+        })
+        document.addEventListener("click", () => {
+            menuDom.style.visibility = "hidden";
+            menuDom.style.opacity = "0";
+        })
+        let longPressTimer = null;
+        let touchX = 0;
+        let touchY = 0;
+        document.addEventListener("touchstart", (event) => {
+            event.preventDefault();
+            const touch = event.touches[0];
+            touchX = touch.clientX;
+            touchY = touch.clientY;
+            longPressTimer = setTimeout(() => {
+                const maxW = window.innerWidth - menuDom.offsetWidth;
+                const maxH = window.innerHeight - menuDom.offsetHeight;
+                menuDom.style.left = `${Math.min(touchX, maxW)}px`;
+                menuDom.style.top = `${Math.min(touchY, maxH)}px`;
+                menuDom.style.visibility = "visible";
+                menuDom.style.opacity = "1";
+            }, 500);
+        });
+        document.addEventListener("touchmove", () => clearTimeout(longPressTimer));
+        document.addEventListener("touchend", () => clearTimeout(longPressTimer));
+        document.addEventListener("touchend", () => {
+            setTimeout(() => {
+                menuDom.style.visibility = "hidden";
+                menuDom.style.opacity = "0";
+            }, 30);
+        });
         const pad = n => n < 10 ? "0" + n : n
         function updateTime() {
             const date = new Date();
@@ -266,6 +524,56 @@
             let window2 = document.getElementById("window2");
             window2.classList.remove("Browsershow");
         }
+        function TextEditorShow() {
+            maxZIndex++;
+            let window3 = document.getElementById("window3");
+            window3.style.zIndex = maxZIndex;
+            window3.classList.add("TextEditorshow");
+        }
+        function NoShowTextEditor() {
+            let window3 = document.getElementById("window3");
+            window3.classList.remove("TextEditorshow");
+        }
+        function TextEditorHelpShow() {
+            maxZIndex++;
+            let window4 = document.getElementById("window4");
+            window4.style.zIndex = maxZIndex;
+            window4.classList.add("TextEditorHelpshow");
+        }
+        function NoShowTextEditorHelp() {
+            let window4 = document.getElementById("window4");
+            window4.classList.remove("TextEditorHelpshow");
+        }
+        function GhvswebtpcShow() {
+            maxZIndex++;
+            let window5 = document.getElementById("window5");
+            window5.style.zIndex = maxZIndex;
+            window5.classList.add("Ghvswebtpcshow");
+        }
+        function NoShowGhvswebtpc() {
+            let window5 = document.getElementById("window5");
+            window5.classList.remove("Ghvswebtpcshow");
+        }
+        function TerminalShow() {
+            maxZIndex++;
+            let window6 = document.getElementById("window6");
+            window6.style.zIndex = maxZIndex;
+            window6.classList.add("Terminalshow");
+        }
+        function NoShowTerminal() {
+            let window6 = document.getElementById("window6");
+            window6.classList.remove("Terminalshow");
+        }
+        function TerminalHelpShow() {
+            maxZIndex++;
+            let window7 = document.getElementById("window7");
+            window7.style.zIndex = maxZIndex;
+            window7.classList.add("TerminalHelpshow");
+        }
+        function NoShowTerminalHelp() {
+            let window7 = document.getElementById("window7");
+            window7.classList.remove("TerminalHelpshow");
+        }
         function windowMax1() {
             let window1 = document.getElementById("window1");
             let style = getComputedStyle(window1);
@@ -282,7 +590,7 @@
         }
         function windowMax2() {
             let window2 = document.getElementById("window2");
-            let style = getComputedStyle(window2);
+            let style = getComputedStyle(window2)
             let width2 = style.width;
             let height2 = style.height;
             if (width2 === "600px" && height2 === "400px") {
@@ -292,6 +600,47 @@
             else {
                 window2.style.width = "600px";
                 window2.style.height = "400px";
+            }
+        }
+        function windowMax3() {
+            let window3 = document.getElementById("window3");
+            let style = getComputedStyle(window3);
+            let width3 = style.width;
+            let height3 = style.height;
+            if (width3 === "700px" && height3 === "500px") {
+                window3.style.width = "100vw";
+                window3.style.height = "100vh";
+            }
+            else {
+                window3.style.width = "700px";
+                window3.style.height = "500px";
+            }
+        }
+        function windowMax4() {
+            let window5 = document.getElementById("window5");
+            let style = getComputedStyle(window5);
+            let width5 = parseFloat(style.width);
+            let height5 = parseFloat(style.height);
+            if (Math.abs(width5 - 500) < 1 && Math.abs(height5 - 307) < 1) {
+                window5.style.width = "100vw";
+                window5.style.height = "100vh";
+            } else {
+                window5.style.width = "500px";
+                window5.style.height = "307px";
+            }
+        }
+        function windowMax5 () {
+            let window6 = document.getElementById("window6");
+            let style = getComputedStyle(window6);
+            let width6 = style.width;
+            let height6 = style.height;
+            if (width6 === "600px" && height6 === "400px") {
+                window6.style.width = "100vw";
+                window6.style.height = "100vh";
+            }
+            else {
+                window6.style.width = "600px";
+                window6.style.height = "400px";
             }
         }
         function QHImage() {

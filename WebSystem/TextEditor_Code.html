@@ -21,7 +21,8 @@
             font-size: 25px;
             font-family: Consolas, monospace;
             resize: none;
-            text-shadow: 0 0 25px rgb(255, 255, 255);
+            text-shadow:0 0 15px rgb(255,255,255),
+            0 0 25px rgb(255,255,255);
             color: rgb(255,255,255);
             background-color: black;
             outline: none;
@@ -30,18 +31,38 @@
         #btn1{
             position: fixed;
             top: 80%;
-            left: 50%;
+            left: 60%;
             transform: translate(-50%,-50%);
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(255,255,255);
             border: none;
             border-radius: 10px;
             color: rgb(0, 0, 0);
             width: 15%;
             height: 5%;
-            transition: background-color 0.5s ease
+            transition: background-color 0.5s ease,
+            color 0.5s ease;
         }
         #btn1:hover{
-            background-color: rgb(179, 179, 179)
+            background-color: rgb(196, 196, 196);
+            color: white;
+        }
+        #btn2{
+            position: fixed;
+            top: 80%;
+            left: 40%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(255,255,255);
+            border: none;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            width: 15%;
+            height: 5%;
+            transition: background-color 0.5s ease,
+            color 0.5s ease;
+        }
+        #btn2:hover{
+            background-color: rgb(196, 196, 196);
+            color: white;
         }
     </style>
     <script>
@@ -52,7 +73,8 @@
 </head>
 <body>
     <textarea id="textarea1"></textarea>
-    <button id="btn1" onclick="window.location.href='./TextEditor.html'">普通主题</button>
+    <button id="btn1" onclick="window.location.href='./TextEditor_CodeBlack.html'">白色主题</button>
+    <button id="btn2" onclick="window.location.href='./TextEditor.html'">普通主题</button>
     <script>
         let textarea1 = document.getElementById("textarea1");
         textarea1.value = localStorage.getItem("TextEditorCodeData") || "";
