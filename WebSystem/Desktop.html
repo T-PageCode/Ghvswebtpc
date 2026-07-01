@@ -42,6 +42,7 @@
             border-radius: 10px;
             width: 90%;
             height: 5%;
+            transition: background-color 0.5s ease;
         }
         .div_class1{
             position: fixed;
@@ -73,6 +74,9 @@
         }
         #div_id6{
             left: 77%;
+        }
+        #div_id7{
+            left: 86%;
         }
         #terminal_icon{
             position: fixed;
@@ -172,7 +176,12 @@
             left: 0%;
             transform: translate(50%);
             height: 90%;
-            border-radius: 10px;;
+            border-radius: 10px;
+        }
+        #image3{
+            position: fixed;
+            height: 80%;
+            border-radius: 10px;
         }
         .image2{
             position: fixed;
@@ -271,6 +280,16 @@
             visibility: visible;
             opacity: 1;
         }
+        #window8{
+            visibility: hidden;
+            opacity: 0;
+            width: 700px;
+            height: 500px;
+        }
+        #window8.Settingsshow{
+            visibility: visible;
+            opacity: 1;
+        }
         .window{
             position: absolute;
             top: 50%;
@@ -279,7 +298,6 @@
             background-color: rgb(255, 255, 255);
             border-radius: 10px;
             overflow: hidden;
-            box-sizing: border-box;
             border: 1px solid rgb(209, 152, 255);
             transition: visibility 0.3s ease,
             opacity 0.3s ease,
@@ -315,10 +333,10 @@
             background-color: white;
             width: 10%;
             height: 10%;
-            transition: background-color 0.5s ease;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: background-color 0.5s ease;
             font-size: 20px;
             font-weight: 200;
         }
@@ -363,6 +381,9 @@
         </div>
         <div class="div_class1" id="div_id6" onclick="TerminalShow()">
             <div id="terminal_icon">>_</div>
+        </div>
+        <div class="div_class1" id="div_id7" onclick="SettingsShow()">
+            <img id="image3" src="../SettingsImage.jpg">
         </div>
         <p id="text1">Hello</p>
         <p id="text2"></p>
@@ -418,7 +439,6 @@
             <p>↔</p>
         </div>
         <video src="../GhvswebtpcShow.mp4" type="video/mp4" controls preload="auto" id="video1"></video>
-        <div id="video_progress"></div>
     </div>
     <div class="window" id="window6">
         <div class="window_close" onclick="NoShowTerminal()">
@@ -443,11 +463,23 @@
         terminal color:black = 切换黑色主题<br>
         clear terminal = 清除输出区<br>
         hello ghvswebtpc = 介绍Ghvswebtpc，带互动❤<br>
-        help = 帮助
+        help = 帮助<br>
+        注意:字符数>70会停止输入
         </p>
+    </div>
+    <div class="window" id="window8">
+        <div class="window_close" onclick="NoShowSettings()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax6()">
+            <p>↔</p>
+        </div>
+        <iframe src="./Settings.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
     <script>
         const menuDom = document.getElementById("CRM");
-        document.addEventListener("contextmenu",(event) => {
+        document.addEventListener("contextmenu", event => {
             event.preventDefault();
             const x = event.clientX;
             const y = event.clientY;
@@ -457,35 +489,44 @@
             menuDom.style.top = `${Math.min(y, maxH)}px`;
             menuDom.style.visibility = "visible";
             menuDom.style.opacity = "1";
-        })
+        });
         document.addEventListener("click", () => {
             menuDom.style.visibility = "hidden";
             menuDom.style.opacity = "0";
-        })
+        });
         let longPressTimer = null;
         let touchX = 0;
         let touchY = 0;
+        let showMenuFlag = false;
         document.addEventListener("touchstart", (event) => {
-            event.preventDefault();
+            if (event.touches.length > 1) {
+                clearTimeout(longPressTimer);
+                return;
+            }
             const touch = event.touches[0];
             touchX = touch.clientX;
             touchY = touch.clientY;
+            showMenuFlag = false;
+            clearTimeout(longPressTimer);
             longPressTimer = setTimeout(() => {
+                event.preventDefault();
                 const maxW = window.innerWidth - menuDom.offsetWidth;
                 const maxH = window.innerHeight - menuDom.offsetHeight;
                 menuDom.style.left = `${Math.min(touchX, maxW)}px`;
                 menuDom.style.top = `${Math.min(touchY, maxH)}px`;
                 menuDom.style.visibility = "visible";
                 menuDom.style.opacity = "1";
+                showMenuFlag = true;
             }, 500);
         });
-        document.addEventListener("touchmove", () => clearTimeout(longPressTimer));
-        document.addEventListener("touchend", () => clearTimeout(longPressTimer));
-        document.addEventListener("touchend", () => {
-            setTimeout(() => {
-                menuDom.style.visibility = "hidden";
-                menuDom.style.opacity = "0";
-            }, 30);
+        document.addEventListener("touchmove", () => {
+            clearTimeout(longPressTimer);
+        });
+        document.addEventListener("touchend", (e) => {
+            clearTimeout(longPressTimer);
+            if(showMenuFlag){
+                e.stopPropagation();
+            }
         });
         const pad = n => n < 10 ? "0" + n : n
         function updateTime() {
@@ -574,6 +615,16 @@
             let window7 = document.getElementById("window7");
             window7.classList.remove("TerminalHelpshow");
         }
+        function SettingsShow() {
+            maxZIndex++;
+            let window8 = document.getElementById("window8");
+            window8.style.zIndex = maxZIndex;
+            window8.classList.add("Settingsshow");
+        }
+        function NoShowSettings() {
+            let window8 = document.getElementById("window8");
+            window8.classList.remove("Settingsshow");
+        }
         function windowMax1() {
             let window1 = document.getElementById("window1");
             let style = getComputedStyle(window1);
@@ -643,6 +694,20 @@
                 window6.style.height = "400px";
             }
         }
+        function windowMax6 () {
+            let window8 = document.getElementById("window8");
+            let style = getComputedStyle(window8);
+            let width8 = style.width;
+            let height8 = style.height;
+            if (width8 === "700px" && height8 === "500px") {
+                window8.style.width = "100vw";
+                window8.style.height = "100vh";
+            }
+            else {
+                window8.style.width = "700px";
+                window8.style.height = "500px";
+            }
+        }
         function QHImage() {
             let body = document.body;
             let GBgGetItem = localStorage.getItem("GBg") || "";
@@ -659,6 +724,22 @@
             }
         }
         QHImage();
+        function IfDBRWLWhiteDivShow() {
+            let DBLWhiteDivLocalStorage = localStorage.getItem("ShowDBLWhiteDiv") || "True";
+            let DBL = document.getElementById("div_id1");
+            let DivClass1 = document.querySelectorAll(".div_class1")
+            if (DBLWhiteDivLocalStorage === "True") {
+                DBL.style.backgroundColor = "white";
+                DivClass1.backgroundColor = "white";
+            }
+            else if (DBLWhiteDivLocalStorage === "False") {
+                DBL.style.backgroundColor = "rgba(255,255,255,0.0)";
+                DivClass1.forEach(DivClass1Item => {
+                    DivClass1Item.style.backgroundColor = "rgba(255,255,255,0.0)";
+                })
+            }
+        }
+        IfDBRWLWhiteDivShow();
     </script>
 </body>
 </html>

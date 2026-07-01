@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <style>
+        body{
+            background-color: rgb(240, 218, 255);
+            background-attachment: fixed;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            margin: 0;
+        }
+        #text1{
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 40px;
+            font-weight: 200;
+            color: rgb(0, 0, 0);
+        }
+        .text2{
+            position: fixed;
+            margin-left: 25%;
+            transform: translateX(-50%);
+            font-size: 25px;
+            font-weight: 200;
+        }
+        #OnOffBtn1{
+            top: 15%;
+        }
+        .OnOffBtn{
+            position: relative;
+            left: 90%;
+            transform: translate(-50%,-35%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .divClass1{
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            height: 60px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+        .LabelClass1{
+            position: relative;
+            width: 52px;
+            height: 26px;
+        }
+        .LabelClass1 input{
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .spanClass1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #ccc;
+            border-radius: 26px;
+            transition: 0.3s ease;
+        }
+        .spanClass1::before{
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .input1:checked + .spanClass1{
+            background:rgb(153,0,255);
+        }
+        .input1:checked + .spanClass1:before{
+            transform:translateX(26px);
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+    </script>
+</head>
+<body>
+    <div id="div_id1">
+        <h1 id="text1">界面</h1>
+        <div class="divClass1">
+            <h1 class="text2">显示任务栏白色色块</h1>
+            <div class="OnOffBtn" id="OnOffBtn1">
+                <label class="LabelClass1">
+                    <input type="checkbox" checked="checked" class="input1" id="input1">
+                    <span class="spanClass1"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script>
+        let input1 = document.getElementById("input1");
+        let LS1 = localStorage.getItem("ShowDBLWhiteDiv") || "True";
+        if (LS1 === "True") {
+            input1.checked = true;
+        }
+        else {
+            input1.checked = false;
+        }
+        input1.onchange = function () {
+            if (input1.checked === true) {
+                localStorage.setItem("ShowDBLWhiteDiv", "True");
+                setTimeout(() => {
+                    top.location.href = "./QHLoad.html";
+                },200)
+            }
+            if (input1.checked === false) {
+                localStorage.setItem("ShowDBLWhiteDiv", "False");
+                setTimeout(() => {
+                    top.location.href = "./QHLoad.html";
+                },200)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -19,7 +19,7 @@
             width: 100vw;
             height: 100vh;
             font-size: 25px;
-            font-family: Consolas, monospace;
+            font-family: "Microsoft YaHei", monospace;
             resize: none;
             color: rgb(255,255,255);
             background-color: rgb(0, 0, 0);
@@ -50,7 +50,7 @@
     </script>
 </head>
 <body>
-    <textarea id="textarea1"></textarea>
+    <textarea id="textarea1" maxlength="70"></textarea>
     <p id="text1">Ghvswebtpc Terminal 终端<br>
     版本 Version:1.0.0，点击任意处开始编辑</p>
     <script>
@@ -66,31 +66,32 @@
                     textarea1.style.color = "black";
                     textarea1.value = "";
                 }
-                if (textarea1.value === "terminal color:black") {
+                else if (textarea1.value === "terminal color:black") {
                     keyd.preventDefault();
                     body.style.backgroundColor = "black";
                     textarea1.style.backgroundColor = "black";
                     textarea1.style.color = "white";
                     textarea1.value = "";
                 }
-                if (textarea1.value === "clear terminal") {
+                else if (textarea1.value === "clear terminal") {
                     keyd.preventDefault();
                     textarea1.value = "";
                 }
-                if (textarea1.value === "hello ghvswebtpc") {
+                else if (textarea1.value === "hello ghvswebtpc") {
                     textarea1.value = `${textarea1.value}\nHello!欢迎来到Ghvswebtpc，这是一个开源的网页版系统项目!\n开源地址:github.com/T-PageCode/Ghvswebtpc`;
                     setTimeout(() => {
                         textarea1.value = "";
                     },5000)
                 }
-                if (textarea1.value === "help") {
+                else if (textarea1.value === "help") {
                     textarea1.value = `${textarea1.value}
                     \n帮助\n
-                    terminal color:white = 切换白色主题\n
-                    terminal color:black = 切换黑色主题\n
-                    clear terminal = 清除输出区\n
-                    hello ghvswebtpc = 介绍Ghvswebtpc，带互动❤\n
-                    help = 帮助`
+terminal color:white = 切换白色主题\n
+terminal color:black = 切换黑色主题\n
+clear terminal = 清除输出区\n
+hello ghvswebtpc = 介绍Ghvswebtpc，带互动❤\n
+help = 帮助\n
+注意:字符数>70会停止输入`
                     setTimeout(() => {
                         textarea1.value = "";
                     },10000)

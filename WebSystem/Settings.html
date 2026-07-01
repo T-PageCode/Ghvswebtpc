@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <style>
+        body{
+            background-color: rgb(231, 196, 255);
+            background-attachment: fixed;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #div_id1{
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%,-50%);
+            width: 30%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0)
+        }
+        #div_id2{
+            top: 15%;
+        }
+        .div_class1{
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(240, 240, 240);
+            width: 70%;
+            height: 5%;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            transition: background-color 0.5s ease,
+            color 0.5s ease;
+        }
+        .div_class1:hover{
+            background-color: rgb(204, 127, 255);
+            color: white;
+        }
+        #text1{
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 20px;
+            font-weight: 200;
+            color: rgb(0, 0, 0);
+            z-index: 1;
+        }
+        #iframe1{
+            position: fixed;
+            top: 50%;
+            left: 65%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(244, 221, 255);
+            width: 70%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+    </script>
+</head>
+<body>
+    <div id="div_id1">
+        <h1 id="text1">设置</h1>
+        <div class="div_class1" id="div_id2">
+            <p>界面</p>
+        </div>
+    </div>
+    <iframe id="iframe1"></iframe>
+    <script>
+        let div_class1 = document.querySelectorAll(".div_class1");
+        let iframe1 = document.getElementById("iframe1");
+        div_class1.forEach(DivClass1Item => {
+            DivClass1Item.addEventListener("click",() => {
+                div_class1.forEach(StyleClick => {
+                    StyleClick.style.backgroundColor = "rgb(240,240,240)";
+                    StyleClick.style.color = "black";
+                });
+                DivClass1Item.style.backgroundColor = "rgb(160,43,255)";
+                DivClass1Item.style.color = "rgb(255,255,255)";
+                if (DivClass1Item.id === "div_id2") {
+                    iframe1.src = "./InterfaceSettings.html";
+                }
+            })
+        })
+    </script>
+</body>
+</html>
