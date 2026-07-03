@@ -1,0 +1,86 @@
+body{
+    background: linear-gradient(150deg,rgb(40, 0, 73),rgb(30, 0, 44));
+    background-attachment: fixed;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#image1{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 20%;
+}
+#text1{
+    position: fixed;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 50px;
+    background-color: rgb(140, 0, 255);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+#span1{
+    position: fixed;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+#text2{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 30px;
+    font-weight: 200;
+}
+#LoadBarBox{
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(51, 0, 94);
+    width: 30%;
+    height: 5px;
+    border-radius: 10px;
+}
+#LoadBar{
+    position: fixed;
+    background: linear-gradient(90deg,rgb(140, 0, 255),rgb(193, 118, 255));
+    width: 0%;
+    height: 5px;
+    border-radius: 10px;
+    animation: move1 forwards 15s;
+}
+@keyframes move1{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+#LoadBarText{
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+}
+#CrashCode{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+}
