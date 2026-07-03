@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ghvswebtpc</title>
     <link rel="icon" href="../SystemLogo.png">
+    <link rel="stylesheet" href="./Style/Desktop.css">
     <style>
         body{
             background-repeat: no-repeat;
@@ -290,6 +291,16 @@
             visibility: visible;
             opacity: 1;
         }
+        #window9{
+            width: 600px;
+            height: 400px;
+            visibility: hidden;
+            opacity: 0;
+        }
+        #window9.Tpcshow{
+            visibility: visible;
+            opacity: 1;
+        }
         .window{
             position: absolute;
             top: 50%;
@@ -385,6 +396,9 @@
         <div class="div_class1" id="div_id7" onclick="SettingsShow()">
             <img id="image3" src="../SettingsImage.jpg">
         </div>
+        <div class="div_class1" id="div_id8" onclick="TpcShow()">
+            <p id="pN4">Tpc</p>
+        </div>
         <p id="text1">Hello</p>
         <p id="text2"></p>
         <p id="text3"></p>
@@ -475,6 +489,16 @@
             <p>↔</p>
         </div>
         <iframe src="./Settings.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div class="window" id="window9">
+        <div class="window_close" onclick="NoShowTpc()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax7()">
+            <p>↔</p>
+        </div>
+        <iframe src="./T-PageCode.html" class="iframe1" sandbox="allow-scripts 
         allow-top-navigation-by-user-activation allow-same-origin"></iframe>
     </div>
     <script>
@@ -741,5 +765,6 @@
         }
         IfDBRWLWhiteDivShow();
     </script>
+    <script src="./Script/Desktop.js"></script>
 </body>
 </html>

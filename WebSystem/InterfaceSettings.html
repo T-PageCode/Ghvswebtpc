@@ -24,12 +24,15 @@
         }
         .text2{
             position: fixed;
-            margin-left: 25%;
+            margin-left: 30%;
             transform: translateX(-50%);
             font-size: 25px;
             font-weight: 200;
         }
         #OnOffBtn1{
+            top: 15%;
+        }
+        #OnOffBtn2{
             top: 15%;
         }
         .OnOffBtn{
@@ -40,9 +43,14 @@
             justify-content: center;
             align-items: center;
         }
+        #div_id2{
+            margin-top: 25%;
+        }
+        #div_id3{
+            margin-top: 40%; 
+        }
         .divClass1{
             position: fixed;
-            top: 30%;
             left: 50%;
             transform: translate(-50%,-50%);
             width: 100%;
@@ -97,40 +105,43 @@
     </script>
 </head>
 <body>
-    <div id="div_id1">
-        <h1 id="text1">界面</h1>
-        <div class="divClass1">
-            <h1 class="text2">显示任务栏白色色块</h1>
-            <div class="OnOffBtn" id="OnOffBtn1">
-                <label class="LabelClass1">
-                    <input type="checkbox" checked="checked" class="input1" id="input1">
-                    <span class="spanClass1"></span>
-                </label>
-            </div>
+    <h1 id="text1">界面</h1>
+    <div class="divClass1" id="div_id2">
+        <h1 class="text2">显示任务栏白色色块</h1>
+        <div class="OnOffBtn" id="OnOffBtn1">
+            <label class="LabelClass1">
+                <input type="checkbox" class="input1" id="input1">
+                <span class="spanClass1"></span>
+            </label>
+        </div>
+    </div>
+    <div class="divClass1" id="div_id3">
+        <h1 class="text2">窗口使用圆角</h1>
+        <div class="OnOffBtn" id="OnOffBtn2">
+            <label class="LabelClass1">
+                <input type="checkbox" class="input1" id="input2">
+                <span class="spanClass1"></span>
+            </label>
         </div>
     </div>
     <script>
         let input1 = document.getElementById("input1");
-        let LS1 = localStorage.getItem("ShowDBLWhiteDiv") || "True";
-        if (LS1 === "True") {
-            input1.checked = true;
-        }
-        else {
-            input1.checked = false;
-        }
+        let input2 = document.getElementById("input2");
+        let LS1 = localStorage.getItem("ShowDBLWhiteDiv");
+        let LS2 = localStorage.getItem("WindowBorderRadius");
+        input1.checked = LS1 === "True";
+        input2.checked = LS2 !== "False";
         input1.onchange = function () {
-            if (input1.checked === true) {
-                localStorage.setItem("ShowDBLWhiteDiv", "True");
-                setTimeout(() => {
-                    top.location.href = "./QHLoad.html";
-                },200)
-            }
-            if (input1.checked === false) {
-                localStorage.setItem("ShowDBLWhiteDiv", "False");
-                setTimeout(() => {
-                    top.location.href = "./QHLoad.html";
-                },200)
-            }
+            ocalStorage.setItem("ShowDBLWhiteDiv", input1.checked ? "True" : "False");
+            setTimeout(() => {
+                top.location.href = "./QHLoad.html";
+            },200)
+        }
+        input2.onchange = function () {
+            localStorage.setItem("WindowBorderRadius", input2.checked ? "True" : "False");
+            setTimeout(() => {
+                top.location.href = "./QHLoad.html";
+            },200)
         }
     </script>
 </body>

@@ -1,0 +1,20 @@
+#pN4{
+    background: linear-gradient(90deg,rgb(218, 155, 255),rgb(132, 0, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 20px;
+}
+#div_id8{
+    left: 95%;
+}
+#window9{
+    visibility: hidden;
+    opacity: 0;
+    width: 600px;
+    height: 400px;
+}
+#window9.Tpcshow{
+    visibility: visible;
+    opacity: 1;
+}
