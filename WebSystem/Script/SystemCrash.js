@@ -3,7 +3,7 @@ let LoadBarText = document.getElementById("LoadBarText");
 LoadBarText.innerText = LoadBar.style.width;
 setTimeout(() => {
     location.href = "./Desktop.html";
-},15000)
+},20000)
 function updateLoadText() {
     const barWidth = LoadBar.offsetWidth;
     const boxWidth = document.getElementById("LoadBarBox").offsetWidth;
@@ -14,6 +14,7 @@ function updateLoadText() {
 updateLoadText();
 function CrashCode() {
     let CrashCode = document.getElementById("CrashCode");
-    CrashCode.innerText = "崩溃代码:" + "SystemError_Crash.html Crash";
+    let Ec = localStorage.getItem("ErrorCode") || "System Error";
+    CrashCode.innerText = "错误信息:" + Ec
 }
 CrashCode();
