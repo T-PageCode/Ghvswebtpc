@@ -56,7 +56,7 @@ body{
     width: 0%;
     height: 5px;
     border-radius: 10px;
-    animation: move1 forwards 15s;
+    animation: move1 forwards 20s;
 }
 @keyframes move1{
     0% {
