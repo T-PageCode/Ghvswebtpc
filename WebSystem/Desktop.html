@@ -44,6 +44,7 @@
             width: 90%;
             height: 5%;
             transition: background-color 0.5s ease;
+            overflow: hidden;
         }
         .div_class1{
             position: fixed;
@@ -159,7 +160,7 @@
         #image1{
             position: fixed;
             top: 50%;
-            left: 5%;
+            left: 50%;
             transform: translate(-50%,-50%);
             height: 90%;
         }
@@ -377,7 +378,9 @@
 <body>
     <div id="CRM"></div>
     <div id="div_id1">
-        <img id="image1" src="../SystemLogo.png" alt="系统图标">
+        <div id="PAndG">
+            <img id="image1" src="../SystemLogo.png" alt="系统图标">
+        </div>
         <div class="div_class1" onclick="GxhShow()" id="div_id2">
             <img class="image2" src="../GxhImage.png" alt="个性化">
         </div>

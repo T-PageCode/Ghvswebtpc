@@ -57,3 +57,15 @@
     font-size: 15px;
     font-weight: 200;
 }
+#PAndG{
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    width: 10%;
+    height: 100%;
+}
+#PAndG:hover{
+    background-color: rgb(150,100,250);
+}
