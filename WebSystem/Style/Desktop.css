@@ -63,8 +63,9 @@
     left: 5%;
     transform: translate(-50%,-50%);
     background-color: transparent;
-    width: 10%;
+    width: 8%;
     height: 100%;
+    transition: background-color 0.5s ease;
 }
 #PAndG:hover{
     background-color: rgb(150,100,250);
