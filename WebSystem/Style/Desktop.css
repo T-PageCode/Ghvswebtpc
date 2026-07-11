@@ -28,6 +28,7 @@
     height: 100px;
     border-radius: 10px;
     transition: background-color 0.5s ease;
+    touch-action: manipulation;
 }
 #CrashIcon:hover{
     background-color: rgb(255,255,255,0.2)
