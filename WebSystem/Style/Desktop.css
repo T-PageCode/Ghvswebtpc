@@ -60,7 +60,7 @@
 #PAndG{
     position: fixed;
     top: 50%;
-    left: 5%;
+    left: 4%;
     transform: translate(-50%,-50%);
     background-color: transparent;
     width: 8%;
@@ -68,5 +68,74 @@
     transition: background-color 0.5s ease;
 }
 #PAndG:hover{
-    background-color: rgb(150,100,250);
+    background-color: rgb(233, 196, 255);
+}
+#PAndG:active{
+    background-color: rgb(183, 146, 255);
+}
+#PAndGDiv{
+    position: fixed;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%,-50%) scale(0.9);
+    background-color: #fdfdfd;
+    border: 1px solid rgb(144, 89, 255);
+    width: 70%;
+    height: 50%;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+#UserIcon1{
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    height: 30%;
+}
+#UserName1{
+    position: fixed;
+    top: 32.5%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    font-weight: 200;
+}
+#Program1PAGD{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    width: 90px;
+    height: 90px;
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
+}
+#Program1PAGD:hover{
+    background-color: rgb(223, 171, 255);
+}
+#Program1PAGD:hover #P1PAGDText{
+    color: white;
+}
+#P1PAGDImage{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    overflow: hidden;
+}
+#P1PAGDText{
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    white-space: nowrap;
+    font-size: 15px;
+    transition: color 0.5s ease;
 }
