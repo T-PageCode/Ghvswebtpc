@@ -50,3 +50,5 @@ JavaScript
 
 > [!NOTE]
 > 最新代码以GitHub为准,GitCode会等几天才会同步。
+
+> 本系统为网页模拟系统，并非真实物理系统
