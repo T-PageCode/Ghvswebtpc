@@ -157,6 +157,11 @@
 增加changelog.md并更新README.md,增加设置的一个选项,修复桌面底部栏“程序与功能”的位置Bug
 </details>
 
+<details>
+<summary>v1.3.1</summary>
+增加桌面的浏览器快捷方式，修复一些问题
+</details>
+
 > [!WARNING]
 > 更新日志可能会有延迟
 > 更新日志包含内测版本
