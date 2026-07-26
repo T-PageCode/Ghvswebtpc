@@ -189,9 +189,9 @@
         let LS1 = localStorage.getItem("ShowDBLWhiteDiv");
         let LS2 = localStorage.getItem("WindowBorderRadius");
         let LS3 = localStorage.getItem("PAGDivSH");
-        input1.checked = LS1 === "True";
+        input1.checked = LS1 !== "False";
         input2.checked = LS2 !== "False";
-        input3.checked = LS3 === "True";
+        input3.checked = LS3 !== "False";
         input1.onchange = function () {
             localStorage.setItem("ShowDBLWhiteDiv", input1.checked ? "True" : "False");
             setTimeout(() => {
