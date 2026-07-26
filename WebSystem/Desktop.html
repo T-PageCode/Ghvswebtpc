@@ -514,10 +514,15 @@
         allow-top-navigation-by-user-activation allow-same-origin"></iframe>
     </div>
     <div id="CrashIcon" ondblclick="window.location.href='./SystemStop.html';ErrorCode('G:/Desktop/Crash.ghpr Cause a Crash')">
-        <div id="ErrorIcon" ondblclick="window.location.href='./SystemStop.html';ErrorCode('G:/Desktop/Crash.ghpr Cause a Crash');">
-            <p ondblclick="window.location.href='./SystemStop.html';ErrorCode('G:/Desktop/Crash.ghpr Cause a Crash');">×</p>
+        <div id="ErrorIcon">
+            <p>×</p>
         </div>
         <p id="CrashText">Crash</p>
+    </div>
+    <div id="BrowserDiv" ondblclick="BrowserShow()">
+        <div id="BrowserIcon">
+        </div>
+        <p id="BrowserText">Ghtpcbrowser</p>
     </div>
     <script>
         const menuDom = document.getElementById("CRM");
@@ -673,8 +678,8 @@
             let width1 = style.width;
             let height1 = style.height;
             if (width1 === "500px" && height1 === "300px") {
-                window1.style.width = "100vw";
-                window1.style.height = "100vh";
+                window1.style.width = "100%";
+                window1.style.height = "100%";
             }
             else {
                 window1.style.width = "500px";
@@ -687,8 +692,8 @@
             let width2 = style.width;
             let height2 = style.height;
             if (width2 === "600px" && height2 === "400px") {
-                window2.style.width = "100vw";
-                window2.style.height = "100vh";
+                window2.style.width = "100%";
+                window2.style.height = "100%";
             }
             else {
                 window2.style.width = "600px";
@@ -701,8 +706,8 @@
             let width3 = style.width;
             let height3 = style.height;
             if (width3 === "700px" && height3 === "500px") {
-                window3.style.width = "100vw";
-                window3.style.height = "100vh";
+                window3.style.width = "100%";
+                window3.style.height = "100%";
             }
             else {
                 window3.style.width = "700px";
@@ -715,8 +720,8 @@
             let width5 = parseFloat(style.width);
             let height5 = parseFloat(style.height);
             if (Math.abs(width5 - 500) < 1 && Math.abs(height5 - 307) < 1) {
-                window5.style.width = "100vw";
-                window5.style.height = "100vh";
+                window5.style.width = "100%";
+                window5.style.height = "100%";
             } else {
                 window5.style.width = "500px";
                 window5.style.height = "307px";
@@ -728,8 +733,8 @@
             let width6 = style.width;
             let height6 = style.height;
             if (width6 === "600px" && height6 === "400px") {
-                window6.style.width = "100vw";
-                window6.style.height = "100vh";
+                window6.style.width = "100%";
+                window6.style.height = "100%";
             }
             else {
                 window6.style.width = "600px";
@@ -742,8 +747,8 @@
             let width8 = style.width;
             let height8 = style.height;
             if (width8 === "700px" && height8 === "500px") {
-                window8.style.width = "100vw";
-                window8.style.height = "100vh";
+                window8.style.width = "100%";
+                window8.style.height = "100%";
             }
             else {
                 window8.style.width = "700px";

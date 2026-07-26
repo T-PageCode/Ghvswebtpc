@@ -14,8 +14,8 @@ function windowMax7() {
     let width9 = style.width;
     let height9 = style.height;
     if (width9 === "600px" && height9 === "400px") {
-        window9.style.width = "100vw";
-        window9.style.height = "100vh";
+        window9.style.width = "100%";
+        window9.style.height = "100%";
     }
     else {
         window9.style.width = "600px";

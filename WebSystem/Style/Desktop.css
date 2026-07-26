@@ -31,7 +31,28 @@
     touch-action: manipulation;
 }
 #CrashIcon:hover{
-    background-color: rgb(255,255,255,0.2)
+    background-color: rgba(255,255,255,0.2)
+}
+#CrashIcon:active{
+    background-color: rgba(255,255,255,0.3)
+}
+#BrowserDiv{
+    position: fixed;
+    top: 17%;
+    left: 8%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+    touch-action: manipulation;
+}
+#BrowserDiv:hover{
+    background-color: rgba(255,255,255,0.2)
+}
+#BrowserDiv:active{
+    background-color: rgba(255,255,255,0.3)
 }
 #ErrorIcon{
     position: fixed;
@@ -48,7 +69,29 @@
     font-size: 40px;
     color: white;
 }
+#BrowserIcon{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(../../BrowserImage.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    color: white;
+}
 #CrashText{
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+}
+#BrowserText{
     position: fixed;
     top: 70%;
     left: 50%;
