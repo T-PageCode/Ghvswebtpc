@@ -1,28 +1,32 @@
-#pN4{
-    background: linear-gradient(90deg,rgb(218, 155, 255),rgb(132, 0, 255));
+#pN4 {
+    background: linear-gradient(90deg, rgb(218, 155, 255), rgb(132, 0, 255));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-size: 20px;
 }
-#div_id8{
+
+#div_id8 {
     left: 95%;
 }
-#window9{
+
+#window9 {
     visibility: hidden;
     opacity: 0;
     width: 600px;
     height: 400px;
 }
-#window9.Tpcshow{
+
+#window9.Tpcshow {
     visibility: visible;
     opacity: 1;
 }
-#CrashIcon{
+
+#CrashIcon {
     position: fixed;
     top: 7%;
     left: 8%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: transparent;
     width: 100px;
     height: 100px;
@@ -30,17 +34,20 @@
     transition: background-color 0.5s ease;
     touch-action: manipulation;
 }
-#CrashIcon:hover{
-    background-color: rgba(255,255,255,0.2)
+
+#CrashIcon:hover {
+    background-color: rgba(255, 255, 255, 0.2)
 }
-#CrashIcon:active{
-    background-color: rgba(255,255,255,0.3)
+
+#CrashIcon:active {
+    background-color: rgba(255, 255, 255, 0.3)
 }
-#BrowserDiv{
+
+#BrowserDiv {
     position: fixed;
     top: 17%;
     left: 8%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: transparent;
     width: 100px;
     height: 100px;
@@ -48,17 +55,20 @@
     transition: background-color 0.5s ease;
     touch-action: manipulation;
 }
-#BrowserDiv:hover{
-    background-color: rgba(255,255,255,0.2)
+
+#BrowserDiv:hover {
+    background-color: rgba(255, 255, 255, 0.2)
 }
-#BrowserDiv:active{
-    background-color: rgba(255,255,255,0.3)
+
+#BrowserDiv:active {
+    background-color: rgba(255, 255, 255, 0.3)
 }
-#ErrorIcon{
+
+#ErrorIcon {
     position: fixed;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: rgb(183, 0, 255);
     width: 60%;
     height: 60%;
@@ -69,11 +79,12 @@
     font-size: 40px;
     color: white;
 }
-#BrowserIcon{
+
+#BrowserIcon {
     position: fixed;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-image: url(../../BrowserImage.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -82,45 +93,51 @@
     border-radius: 10px;
     color: white;
 }
-#CrashText{
+
+#CrashText {
     position: fixed;
     top: 70%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 15px;
     font-weight: 200;
 }
-#BrowserText{
+
+#BrowserText {
     position: fixed;
     top: 70%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 15px;
     font-weight: 200;
 }
-#PAndG{
+
+#PAndG {
     position: fixed;
     top: 50%;
     left: 4%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: transparent;
     width: 8%;
     height: 100%;
     transition: background-color 0.5s ease;
 }
-#PAndG:hover{
+
+#PAndG:hover {
     background-color: rgb(233, 196, 255);
 }
-#PAndG:active{
+
+#PAndG:active {
     background-color: rgb(183, 146, 255);
 }
-#PAndGDiv{
+
+#PAndGDiv {
     position: fixed;
     top: 65%;
     left: 40%;
-    transform: translate(-50%,-50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9);
     background-color: #fdfdfd;
     border: 1px solid rgb(144, 89, 255);
     width: 70%;
@@ -129,56 +146,482 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s ease,
-    opacity 0.3s ease,
-    transform 0.3s ease;
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
-#UserIcon1{
+
+#UserIcon1 {
     position: fixed;
     top: 20%;
     left: 20%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 30%;
 }
-#UserName1{
+
+#UserName1 {
     position: fixed;
     top: 32.5%;
     left: 20%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 30px;
     font-weight: 200;
 }
-#Program1PAGD{
+
+#Program1PAGD {
     position: fixed;
     top: 20%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: transparent;
     width: 90px;
     height: 90px;
     transition: background-color 0.5s ease;
     border-radius: 10px;
 }
-#Program1PAGD:hover{
+
+#Program1PAGD:hover {
     background-color: rgb(223, 171, 255);
 }
-#Program1PAGD:hover #P1PAGDText{
+
+#Program1PAGD:hover #P1PAGDText {
     color: white;
 }
-#P1PAGDImage{
+
+#P1PAGDImage {
     position: fixed;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 100%;
     overflow: hidden;
 }
-#P1PAGDText{
+
+#P1PAGDText {
     position: fixed;
     top: 65%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: black;
     white-space: nowrap;
     font-size: 15px;
     transition: color 0.5s ease;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#CRM {
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    border: 2px solid rgb(153, 0, 255);
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease,
+        visibility 0.3s ease,
+        top 0.3s ease,
+        left 0.3s ease;
+}
+
+#div_id1 {
+    position: fixed;
+    left: 50%;
+    top: 96%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 90%;
+    height: 60px;
+    transition: background-color 0.5s ease;
+    overflow: hidden;
+}
+
+.div_class1 {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 8%;
+    height: 90%;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_class1:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+#div_id2 {
+    left: 27%;
+}
+
+#div_id3 {
+    left: 36%;
+}
+
+#div_id4 {
+    left: 59%;
+}
+
+#div_id5 {
+    left: 68%;
+}
+
+#div_id6 {
+    left: 77%;
+}
+
+#div_id7 {
+    left: 86%;
+}
+
+#terminal_icon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(196, 124, 255);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#text1 {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+    background: linear-gradient(90deg,
+            rgb(209, 152, 255), rgb(153, 0, 255),
+            rgb(234, 202, 255), rgb(140, 0, 255));
+    font-size: 25px;
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.8s ease,
+        transform 0.5s ease;
+}
+
+#text1:hover {
+    background-position: 100% 50%;
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+#text2 {
+    position: fixed;
+    top: -10%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+#text3 {
+    position: fixed;
+    top: 30%;
+    left: 15%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+
+#h1N1 {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+    font-size: 30px;
+}
+
+#pN1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+}
+
+#pN2 {
+    position: fixed;
+    color: rgb(196, 124, 255);
+    font-size: 20px;
+}
+
+#h1N2 {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+    font-size: 30px;
+}
+
+#image1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+}
+
+#pN3 {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+    width: 300px;
+}
+
+#image2 {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: translate(50%);
+    height: 90%;
+    border-radius: 10px;
+}
+
+#image3 {
+    position: fixed;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.image2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150%;
+}
+
+.iframe1 {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 90%;
+    border: none;
+}
+
+#video1 {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    height: 92%;
+    transition: height 0.5s ease;
+}
+
+#window1 {
+    visibility: hidden;
+    opacity: 0;
+    width: 500px;
+    height: 300px;
+}
+
+#window1.Gxhshow {
+    visibility: visible;
+    opacity: 1;
+}
+
+#window2 {
+    visibility: hidden;
+    opacity: 0;
+    width: 600px;
+    height: 400px;
+}
+
+#window2.Browsershow {
+    visibility: visible;
+    opacity: 1;
+}
+
+#window3 {
+    visibility: hidden;
+    opacity: 0;
+    width: 700px;
+    height: 500px;
+}
+
+#window3.TextEditorshow {
+    visibility: visible;
+    opacity: 1;
+}
+
+#window4 {
+    visibility: hidden;
+    opacity: 0;
+    width: 500px;
+    height: 300px;
+}
+
+#window4.TextEditorHelpshow {
+    visibility: visible;
+    opacity: 1;
+}
+
+#window5 {
+    visibility: hidden;
+    opacity: 0;
+    width: 500px;
+    height: 307px;
+}
+
+#window5.Ghvswebtpcshow {
+    visibility: visible;
+    opacity: 1;
+}
+
+#window6 {
+    visibility: hidden;
+    opacity: 0;
+    width: 600px;
+    height: 400px;
+}
+
+#window6.Terminalshow {
+    visibility: visible;
+    opacity: 1;
+}
+
+#window7 {
+    visibility: hidden;
+    opacity: 0;
+    width: 500px;
+    height: 300px;
+}
+
+#window7.TerminalHelpshow {
+    visibility: visible;
+    opacity: 1;
+}
+
+#window8 {
+    visibility: hidden;
+    opacity: 0;
+    width: 700px;
+    height: 500px;
+}
+
+#window8.Settingsshow {
+    visibility: visible;
+    opacity: 1;
+}
+
+#window9 {
+    width: 600px;
+    height: 400px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#window9.Tpcshow {
+    visibility: visible;
+    opacity: 1;
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(209, 152, 255);
+    transition: visibility 0.3s ease,
+        opacity 0.3s ease,
+        width 0.5s ease,
+        height 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.window_close {
+    position: absolute;
+    top: 5%;
+    left: 4.9%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 10%;
+    height: 10%;
+    transition: background-color 0.5s ease,
+        color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.window_close:hover {
+    background-color: rgb(153, 0, 255);
+    color: white;
+}
+
+.window_max {
+    position: absolute;
+    top: 5%;
+    left: 14.9%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.window_max:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.window_help {
+    position: absolute;
+    top: 5%;
+    left: 24.9%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 10%;
+    height: 10%;
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.window_help:hover {
+    background-color: rgb(226, 226, 226);
 }
