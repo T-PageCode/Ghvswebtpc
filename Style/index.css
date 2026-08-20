@@ -2,7 +2,7 @@ body{
     background-image: url("../BackGroundImage.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     background-attachment: fixed;
     user-select: none;
@@ -18,7 +18,7 @@ body{
     width: 800px;
     height: 400px;
     background-color: rgba(255,255,255,0.3);
-    border-radius: 10px;
+    border-radius: 20px;
     -webkit-backdrop-filter: blur(9px);
     backdrop-filter: blur(9px);
     overflow: hidden;
@@ -28,12 +28,12 @@ body{
     top: 92.5%;
     left: 50%;
     transform: translate(-50%);
-    width: 71%;
-    height: 5%;
+    width: 900px;
+    height: 70px;
     background-color: rgba(255,255,255,0.3);
-    border-radius: 10px;
     -webkit-backdrop-filter: blur(9px);
     backdrop-filter: blur(9px);
+    border-radius: 20px;
     overflow: hidden;
 }
 #text1{
@@ -78,12 +78,13 @@ body{
 }
 #text5{
     position: fixed;
-    top: 0%;
-    left: 15%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     font-size: 20px;
     font-weight: 200;
-    white-space: nowrap;
-    color: white;
+    width: 90%;
+    color: rgb(255, 255, 255);
 }
 #btn1{
     position: fixed;
