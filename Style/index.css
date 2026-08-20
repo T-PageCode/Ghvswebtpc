@@ -15,8 +15,8 @@ body{
     top: 40%;
     left: 50%;
     transform: translate(-50%);
-    width: 50%;
-    height: 30%;
+    width: 800px;
+    height: 400px;
     background-color: rgba(255,255,255,0.3);
     border-radius: 10px;
     -webkit-backdrop-filter: blur(9px);
@@ -89,8 +89,8 @@ body{
     position: fixed;
     top: 50%;
     left: 25%;
-    width: 25%;
-    height: 15%;
+    width: 180px;
+    height: 50px;
     border: none;
     background-color: rgb(136, 0, 136);
     border-radius: 15px;
@@ -105,8 +105,8 @@ body{
     position: fixed;
     top: 50%;
     left: 55%;
-    width: 25%;
-    height: 15%;
+    width: 180px;
+    height: 50px;
     border: none;
     background-color: rgb(136, 0, 136);
     border-radius: 15px;
@@ -122,8 +122,8 @@ body{
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
-    width: 15%;
-    height: 5%;
+    width: 180px;
+    height: 50px;
     color: white;
     border-radius: 15px;
     border: none;
