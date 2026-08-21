@@ -1,14 +1,7 @@
 body{
-    background-image: url("../BackGroundImage.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    margin: 0;
-    background-attachment: fixed;
+    background-color: rgb(255,255,255);
     user-select: none;
     -moz-user-select: none;
-    -webkit-user-select: none;
-    overflow: hidden;
 }
 #div_id1{
     position: fixed;
@@ -17,10 +10,8 @@ body{
     transform: translate(-50%);
     width: 800px;
     height: 400px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(230,230,230);
     border-radius: 20px;
-    -webkit-backdrop-filter: blur(9px);
-    backdrop-filter: blur(9px);
     overflow: hidden;
 }
 #div_id2{
@@ -30,9 +21,7 @@ body{
     transform: translate(-50%);
     width: 900px;
     height: 70px;
-    background-color: rgba(255,255,255,0.3);
-    -webkit-backdrop-filter: blur(9px);
-    backdrop-filter: blur(9px);
+    background-color: rgba(230,230,230);
     border-radius: 20px;
     overflow: hidden;
 }
@@ -54,7 +43,7 @@ body{
     top: 10%;
     left: 50%;
     transform: translate(-50%);
-    color: white;
+    color: black;
     font-weight: 200;
 }
 #text3{
@@ -64,7 +53,7 @@ body{
     transform: translateX(-50%);
     font-size: 15px;
     font-weight: 200;
-    color: white;
+    color: black;
     white-space: nowrap;
 }
 #text4{
@@ -74,7 +63,7 @@ body{
     transform: translateX(-50%);
     font-size: 15px;
     font-weight: 200;
-    color: white;
+    color: black;
 }
 #text5{
     position: fixed;
@@ -84,7 +73,7 @@ body{
     font-size: 20px;
     font-weight: 200;
     width: 90%;
-    color: rgb(255, 255, 255);
+    color: black;
 }
 #btn1{
     position: fixed;
