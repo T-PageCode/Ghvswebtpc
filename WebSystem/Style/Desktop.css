@@ -166,7 +166,6 @@
     font-size: 30px;
     font-weight: 200;
 }
-
 #Program1PAGD {
     position: fixed;
     top: 20%;
@@ -178,15 +177,23 @@
     transition: background-color 0.5s ease;
     border-radius: 10px;
 }
-
 #Program1PAGD:hover {
-    background-color: rgb(223, 171, 255);
+    background-color: rgb(230,230,230);
 }
-
-#Program1PAGD:hover #P1PAGDText {
-    color: white;
+#Program2PAGD {
+    position: fixed;
+    top: 20%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 90px;
+    height: 90px;
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
 }
-
+#Program2PAGD:hover {
+    background-color: rgb(230,230,230);
+}
 #P1PAGDImage {
     position: fixed;
     top: 40%;
@@ -195,7 +202,6 @@
     height: 100%;
     overflow: hidden;
 }
-
 #P1PAGDText {
     position: fixed;
     top: 65%;
@@ -206,7 +212,24 @@
     font-size: 15px;
     transition: color 0.5s ease;
 }
-
+#P2PAGDText {
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    white-space: nowrap;
+    font-size: 15px;
+    transition: color 0.5s ease;
+}
+#P2PAGDImage {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    overflow: hidden;
+}
 body {
     background-repeat: no-repeat;
     background-size: cover;
@@ -219,7 +242,6 @@ body {
     width: 100%;
     overflow: hidden;
 }
-
 #CRM {
     position: fixed;
     z-index: 1000;
@@ -231,11 +253,10 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease,
-        visibility 0.3s ease,
-        top 0.3s ease,
-        left 0.3s ease;
+    visibility 0.3s ease,
+    top 0.3s ease,
+    left 0.3s ease;
 }
-
 #div_id1 {
     position: fixed;
     left: 50%;
@@ -248,7 +269,6 @@ body {
     transition: background-color 0.5s ease;
     overflow: hidden;
 }
-
 .div_class1 {
     position: fixed;
     top: 50%;
@@ -262,35 +282,27 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .div_class1:hover {
     background-color: rgb(218, 218, 218);
 }
-
 #div_id2 {
     left: 27%;
 }
-
 #div_id3 {
     left: 36%;
 }
-
 #div_id4 {
     left: 59%;
 }
-
 #div_id5 {
     left: 68%;
 }
-
 #div_id6 {
     left: 77%;
 }
-
 #div_id7 {
     left: 86%;
 }
-
 #terminal_icon {
     position: fixed;
     top: 50%;

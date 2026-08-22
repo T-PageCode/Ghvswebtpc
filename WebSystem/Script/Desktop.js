@@ -63,7 +63,8 @@ function IfPAGDSHP() {
         PAGDiv.style.visibility = "hidden";
         PAGDiv.style.opacity = "0";
         PAGDiv.style.transform = "translate(-50%,-50%) scale(0.9)";
-    } else {
+    }
+    else {
         PAGDiv.style.visibility = "visible";
         PAGDiv.style.opacity = "1";
         PAGDiv.style.transform = "translate(-50%,-50%) scale(1)";
