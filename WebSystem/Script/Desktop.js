@@ -1,3 +1,4 @@
+let menuTimer = null;
 function TpcShow() {
     maxZIndex++;
     let window9 = document.getElementById("window9");
@@ -70,56 +71,26 @@ function IfPAGDSHP() {
         PAGDiv.style.transform = "translate(-50%,-50%) scale(1)";
     }
 }
-const menuDom = document.getElementById("CRM");
-document.addEventListener("contextmenu", event => {
-    event.preventDefault();
-    const x = event.clientX;
-    const y = event.clientY;
-    const maxW = window.innerWidth - menuDom.offsetWidth;
-    const maxH = window.innerHeight - menuDom.offsetHeight;
-    menuDom.style.left = `${Math.min(x, maxW)}px`;
-    menuDom.style.top = `${Math.min(y, maxH)}px`;
-    menuDom.style.visibility = "visible";
-    menuDom.style.opacity = "1";
-});
-document.addEventListener("click", () => {
-    menuDom.style.visibility = "hidden";
-    menuDom.style.opacity = "0";
-});
-let longPressTimer = null;
-let touchX = 0;
-let touchY = 0;
-let showMenuFlag = false;
-document.addEventListener("touchstart", (event) => {
-    if (event.touches.length > 1) {
-        clearTimeout(longPressTimer);
+const menu = document.getElementById("CRM");
+document.addEventListener("contextmenu",(e) => {
+    clearTimeout(menuTimer)
+    e.preventDefault();
+    let x = e.clientX;
+    let y = e.clientY;
+    menu.style.top = y + "px";
+    menu.style.left = x + "px";
+    menu.style.visibility = "visible";
+    menu.style.opacity = "1";
+})
+document.addEventListener("click",(e) => {
+    if (e.target.closest("#CRM")) {
         return;
     }
-    const touch = event.touches[0];
-    touchX = touch.clientX;
-    touchY = touch.clientY;
-    showMenuFlag = false;
-    clearTimeout(longPressTimer);
-    longPressTimer = setTimeout(() => {
-        event.preventDefault();
-        const maxW = window.innerWidth - menuDom.offsetWidth;
-        const maxH = window.innerHeight - menuDom.offsetHeight;
-        menuDom.style.left = `${Math.min(touchX, maxW)}px`;
-        menuDom.style.top = `${Math.min(touchY, maxH)}px`;
-        menuDom.style.visibility = "visible";
-        menuDom.style.opacity = "1";
-        showMenuFlag = true;
-    }, 500);
-});
-document.addEventListener("touchmove", () => {
-    clearTimeout(longPressTimer);
-});
-document.addEventListener("touchend", (e) => {
-    clearTimeout(longPressTimer);
-    if (showMenuFlag) {
-        e.stopPropagation();
-    }
-});
+    menu.style.opacity = "0";
+    menuTimer = setTimeout(() => {
+        menu.style.visibility = "hidden";
+    },500)
+})
 const pad = n => n < 10 ? "0" + n : n
 function updateTime() {
     const date = new Date();

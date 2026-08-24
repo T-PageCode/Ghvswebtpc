@@ -245,12 +245,14 @@ body {
 #CRM {
     position: fixed;
     z-index: 1000;
-    background-color: white;
-    border: 2px solid rgb(153, 0, 255);
+    background-color: rgb(255,255,255,0.3);
+    border: 2px solid rgb(140, 0, 255,0.5);
     width: 200px;
     height: 300px;
     border-radius: 10px;
     visibility: hidden;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     opacity: 0;
     transition: opacity 0.3s ease,
     visibility 0.3s ease,
