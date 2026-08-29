@@ -131,7 +131,7 @@ body{
 }
 #web-sys-text{
     position: absolute;
-    top: 350px;
+    top: 400px;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 0px;
@@ -147,5 +147,34 @@ body{
     }
     100%{
         font-size: 30px;
+    }
+}
+#oldmain{
+    position: absolute;
+    top: 340px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    color: rgb(170, 22, 255);
+    font-size: 0px;
+    animation: oldmainbig 0.7s forwards;
+    animation-delay: 1s;
+}
+#oldmain:hover{
+    color: rgb(202, 97, 255);
+}
+#oldmain:active{
+    color: rgb(215, 135, 255);
+}
+@keyframes oldmainbig{
+    0%{
+        font-size: 0px;
+    }
+    50%{
+        font-size: 25px;
+    }
+    100%{
+        font-size: 20px;
     }
 }
