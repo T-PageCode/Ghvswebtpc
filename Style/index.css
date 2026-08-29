@@ -1,133 +1,151 @@
 body{
-    background-color: rgb(255,255,255);
     user-select: none;
     -moz-user-select: none;
 }
-#div_id1{
-    position: fixed;
-    top: 40%;
+#sys-logo{
+    position: absolute;
     left: 50%;
-    transform: translate(-50%);
-    width: 800px;
-    height: 400px;
-    background-color: rgba(230,230,230);
-    border-radius: 20px;
-    overflow: hidden;
+    top: 100px;
+    transform: translate(-50%,-50%);
+    height: 0px;
+    animation: syslogobig 0.7s forwards;
 }
-#div_id2{
-    position: fixed;
-    top: 92.5%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 900px;
-    height: 70px;
-    background-color: rgba(230,230,230);
-    border-radius: 20px;
-    overflow: hidden;
-}
-#text1{
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
+*{
     font-weight: 200;
-    font-size: 60px;
-    background: linear-gradient(90deg,rgb(255,180,243),rgb(255, 180, 243),rgb(255, 0, 255));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    margin: 0;
+    padding: 0;
 }
-#text2{
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%);
-    color: black;
-    font-weight: 200;
+@keyframes syslogobig{
+    0%{
+        height: 0px;
+    }
+    50%{
+        height: 160px;
+    }
+    100%{
+        height: 140px;
+    }
 }
-#text3{
-    position: fixed;
-    top: 30%;
-    left: 51%;
-    transform: translateX(-50%);
-    font-size: 15px;
-    font-weight: 200;
-    color: black;
-    white-space: nowrap;
-}
-#text4{
-    position: fixed;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 15px;
-    font-weight: 200;
-    color: black;
-}
-#text5{
-    position: fixed;
-    top: 30%;
+#ghvswebtpc-text{
+    position: absolute;
+    top: 220px;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 20px;
-    font-weight: 200;
-    width: 90%;
-    color: black;
+    font-size: 0px;
+    animation: ghvswebtpctextbig 0.7s forwards;
+    animation-delay: 0.4s;
 }
-#btn1{
-    position: fixed;
-    top: 50%;
-    left: 25%;
-    width: 180px;
-    height: 50px;
-    border: none;
-    background-color: rgb(136, 0, 136);
+@keyframes ghvswebtpctextbig{
+    0%{
+        font-size: 0px;
+    }
+    50%{
+        font-size: 40px;
+    }
+    to{
+        font-size: 35px;
+    }
+}
+#go{
+    position: absolute;
+    top: 290px;
+    left: calc(50% - 90px);
+    transform: translate(-50%,-50%);
+    height: 0px;
+    width: 0px;
     border-radius: 15px;
+    border: none;
+    background-color: rgb(132, 0, 255);
     color: white;
-    font-size: 20px;
+    animation: gobig 0.7s forwards;
+    animation-delay: 0.7s;
+    font-size: 0px;
     transition: background-color 0.5s ease;
 }
-#btn1:hover{
-    background-color: rgb(192, 0, 192);
+#go:hover{
+    background-color: rgb(127, 0, 211);
 }
-#btn2{
-    position: fixed;
-    top: 50%;
-    left: 55%;
-    width: 180px;
-    height: 50px;
-    border: none;
-    background-color: rgb(136, 0, 136);
+#go:active{
+    background-color: rgb(99, 0, 165);
+}
+@keyframes gobig{
+    0%{
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+    }
+    50%{
+        height: 40px;
+        width: 170px;
+        font-size: 19px;
+    }
+    100%{
+        height: 35px;
+        width: 150px;
+        font-size: 16px;
+    }
+}
+#guides{
+    position: absolute;
+    top: 290px;
+    left: calc(50% + 90px);
+    transform: translate(-50%,-50%);
+    height: 0px;
+    width: 0px;
     border-radius: 15px;
+    border: 0px solid rgb(188, 99, 255);
+    background-color: rgb(255, 255, 255);
+    font-size: 0px;
+    color: rgb(188, 99, 255);
+    animation: guidesbig 0.7s forwards;
+    animation-delay: 1s;
+    transition: background-color 0.5s ease,
+    color 0.5s ease;
+}
+#guides:hover{
+    background-color: rgb(188, 99, 255);
     color: white;
-    font-size: 20px;
-    transition: background-color 0.5s ease;
 }
-#btn2:hover{
-    background-color: rgb(192, 0, 192);
+#guides:active{
+    background-color: rgb(170, 22, 255);
 }
-#btn3{
-    position: fixed;
-    top: 80%;
+@keyframes guidesbig{
+    0%{
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+        border-width: 0px;
+    }
+    50%{
+        height: 40px;
+        width: 170px;
+        font-size: 19px;
+        border-width: 1px;
+    }
+    100%{
+        height: 35px;
+        width: 150px;
+        font-size: 16px;
+        border-width: 1px;
+    }
+}
+#web-sys-text{
+    position: absolute;
+    top: 350px;
     left: 50%;
-    transform: translateX(-50%);
-    width: 180px;
-    height: 50px;
-    color: white;
-    border-radius: 15px;
-    border: none;
-    background-color: rgb(136, 0, 136);
-    font-size: 15px;
-    transition: background-color 0.5s ease;
+    transform: translate(-50%,-50%);
+    font-size: 0px;
+    animation: websystextbig 0.7s forwards;
+    animation-delay: 1.2s;
 }
-#btn3:hover{
-    background-color:rgb(192, 0, 192);
-}
-#image1{
-    position: fixed;
-    top: 17.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 10%;
+@keyframes websystextbig{
+    0%{
+        font-size: 0px;
+    }
+    50%{
+        font-size: 35px;
+    }
+    100%{
+        font-size: 30px;
+    }
 }
