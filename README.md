@@ -45,6 +45,8 @@ tpc = GitHub用户名
 HTML
 CSS
 JavaScript
+# 主页换新通知
+主页已换新,如果需要旧版本的主页请访问index-old.html
 
 ---
 
