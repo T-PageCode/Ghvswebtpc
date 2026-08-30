@@ -1,3 +1,6 @@
+*{
+    margin: 0
+}
 #pN4 {
     background: linear-gradient(90deg, rgb(218, 155, 255), rgb(132, 0, 255));
     -webkit-background-clip: text;
@@ -84,7 +87,7 @@
 }
 #CrashText{
     position: fixed;
-    top: 70%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -93,7 +96,7 @@
 }
 #BrowserText {
     position: fixed;
-    top: 70%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -119,11 +122,11 @@
 #PAndGDiv {
     position: fixed;
     top: 65%;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     background-color: #fdfdfd;
     border: 1px solid rgb(144, 89, 255);
-    width: 70%;
+    width: 800px;
     height: 50%;
     border-radius: 10px;
     visibility: hidden;
@@ -164,7 +167,7 @@
 #Program2PAGD {
     position: fixed;
     top: 20%;
-    left: 62%;
+    left: 65%;
     transform: translate(-50%, -50%);
     background-color: transparent;
     width: 90px;
@@ -185,7 +188,7 @@
 }
 #P1PAGDText {
     position: fixed;
-    top: 65%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
@@ -195,7 +198,7 @@
 }
 #P2PAGDText {
     position: fixed;
-    top: 65%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
@@ -244,10 +247,10 @@ body {
     position: fixed;
     left: 50%;
     top: 96%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    width: 90%;
+    width: 850px;
     height: 60px;
     transition: background-color 0.5s ease;
     overflow: hidden;
@@ -303,7 +306,7 @@ body {
 }
 #text1{
     position: fixed;
-    top: 0%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 200;
@@ -325,13 +328,13 @@ body {
 }
 #text2{
     position: fixed;
-    top: 0px;
+    top: 15px;
     left: 15%;
     transform: translate(-50%,-50%);
 }
 #text3{
     position: fixed;
-    top: 20px;
+    top: 40px;
     left: 15%;
     font-size: 20px;
     transform: translate(-50%, -50%);
