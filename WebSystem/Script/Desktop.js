@@ -28,7 +28,7 @@ function IfWindowBorderRadius() {
     let Window = document.querySelectorAll(".window");
     if (BorderRadius === "True") {
         Window.forEach(Win => {
-            Win.style.borderRadius = "10px";
+            Win.style.borderRadius = "15px";
         })
     }
     else {
@@ -289,14 +289,14 @@ function QHImage() {
 QHImage();
 function IfDBRWLWhiteDivShow() {
     let DBLWhiteDivLocalStorage = localStorage.getItem("ShowDBLWhiteDiv") || "True";
-    let DBL = document.getElementById("div_id1");
+    let taskbar = document.getElementById("taskbar");
     let DivClass1 = document.querySelectorAll(".div_class1")
     if (DBLWhiteDivLocalStorage === "True") {
-        DBL.style.backgroundColor = "white";
+        taskbar.style.backgroundColor = "white";
         DivClass1.backgroundColor = "white";
     }
     else if (DBLWhiteDivLocalStorage === "False") {
-        DBL.style.backgroundColor = "rgba(255,255,255,0.0)";
+        taskbar.style.backgroundColor = "rgba(255,255,255,0.0)";
         DivClass1.forEach(DivClass1Item => {
             DivClass1Item.style.backgroundColor = "rgba(255,255,255,0.0)";
         })
