@@ -246,11 +246,11 @@ body {
 #taskbar{
     position: fixed;
     left: 50%;
-    top: 96%;
-    transform: translate(-50%,-50%);
+    bottom: 15px;
+    transform: translate(-50%);
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    width: 850px;
+    width: 950px;
     height: 60px;
     transition: background-color 0.5s ease;
     overflow: hidden;
