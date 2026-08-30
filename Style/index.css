@@ -108,6 +108,7 @@ body{
 }
 #guides:active{
     background-color: rgb(170, 22, 255);
+    color: white;
 }
 @keyframes guidesbig{
     0%{
