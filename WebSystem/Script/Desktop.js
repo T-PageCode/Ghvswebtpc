@@ -287,22 +287,22 @@ function QHImage() {
     }
 }
 QHImage();
-function IfDBRWLWhiteDivShow() {
-    let DBLWhiteDivLocalStorage = localStorage.getItem("ShowDBLWhiteDiv") || "True";
+function IftaskbarWLWhiteDivShow() {
+    let taskbarWhiteDivLocalStorage = localStorage.getItem("ShowDBLWhiteDiv") || "True";
     let taskbar = document.getElementById("taskbar");
     let DivClass1 = document.querySelectorAll(".div_class1")
-    if (DBLWhiteDivLocalStorage === "True") {
+    if (taskbarWhiteDivLocalStorage === "True") {
         taskbar.style.backgroundColor = "white";
         DivClass1.backgroundColor = "white";
     }
-    else if (DBLWhiteDivLocalStorage === "False") {
+    else if (taskbarWhiteDivLocalStorage === "False") {
         taskbar.style.backgroundColor = "rgba(255,255,255,0.0)";
         DivClass1.forEach(DivClass1Item => {
             DivClass1Item.style.backgroundColor = "rgba(255,255,255,0.0)";
         })
     }
 }
-IfDBRWLWhiteDivShow();
+IftaskbarWLWhiteDivShow();
 function ErrorCode(Code) {
     localStorage.setItem("ErrorCode", Code);
 }
