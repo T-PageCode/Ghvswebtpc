@@ -325,13 +325,13 @@ body {
 }
 #text2{
     position: fixed;
-    top: -10%;
+    top: 0px;
     left: 15%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 #text3{
     position: fixed;
-    top: 30%;
+    top: 20px;
     left: 15%;
     font-size: 20px;
     transform: translate(-50%, -50%);
