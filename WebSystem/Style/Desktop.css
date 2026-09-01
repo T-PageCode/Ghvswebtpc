@@ -128,7 +128,7 @@
     border: 1px solid rgb(144, 89, 255);
     width: 800px;
     height: 50%;
-    border-radius: 10px;
+    border-radius: 20px;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s ease,
