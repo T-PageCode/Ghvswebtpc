@@ -1,4 +1,7 @@
 let menuTimer = null;
+document.querySelectorAll("*").forEach((elements) => {
+    elements.draggable = false;
+})
 function TpcShow() {
     maxZIndex++;
     let window9 = document.getElementById("window9");
