@@ -1,6 +1,8 @@
-body{
+body,html{
     user-select: none;
     -moz-user-select: none;
+    background: linear-gradient(180deg,rgb(194, 236, 255),rgb(227, 198, 255));
+    height: 100%;
 }
 #sys-logo{
     position: absolute;
@@ -9,6 +11,15 @@ body{
     transform: translate(-50%,-50%);
     height: 0px;
     animation: syslogobig 0.7s forwards;
+    transition: filter 0.3s ease,
+    transform 0.3s ease;
+}
+#sys-logo:hover{
+    filter: brightness(1.2);
+}
+#sys-logo:active{
+    filter: brightness(1.4);
+    transform: translate(-50%,-50%) scale(0.8);
 }
 *{
     font-weight: 200;
@@ -94,7 +105,7 @@ body{
     width: 0px;
     border-radius: 15px;
     border: 0px solid rgb(188, 99, 255);
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     font-size: 0px;
     color: rgb(188, 99, 255);
     animation: guidesbig 0.7s forwards;
