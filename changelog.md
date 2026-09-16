@@ -162,6 +162,11 @@
 增加桌面的浏览器快捷方式，修复一些问题
 </details>
 
+<details>
+<summary>v1.3.2</summary>
+修改一些css,修复一些Bug
+</details>
+
 > [!WARNING]
 > 更新日志可能会有延迟
 > 更新日志包含内测版本
