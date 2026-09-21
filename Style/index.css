@@ -190,3 +190,35 @@ body,html{
         font-size: 20px;
     }
 }
+#t-codesystem{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 500px;
+    height: 105px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 32px;
+    border-radius: 20px;
+}
+#t-codesystem h1{
+    font-size: 22.5px;
+}
+#t-codesystem button{
+    width: 150px;
+    height: 25px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(183,0,255);
+    color: white;
+    transition: background-color 0.5s ease;
+}
+#t-codesystem button:hover{
+    background-color: rgb(155,0,255);
+}
+#t-codesystem button:active{
+    background-color: rgb(125,0,255);
+}
