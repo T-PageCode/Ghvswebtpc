@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 200;
     border-radius: 50%;
 }
@@ -52,21 +52,22 @@ body {
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 17.5px;
+    font-size: 15.5px;
     color: white;
 }
 #text4 {
     position: fixed;
-    top: 5%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     font-weight: 200;
     font-size: 60px;
+    padding: 12px;
 }
 #text5 {
     position: fixed;
-    top: 15%;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -86,6 +87,7 @@ body {
     color: white;
     font-size: 15px;
     transition: background-color 0.5s ease;
+    padding: 10.5px;
 }
 #button1:hover {
     background-color: rgb(212, 0, 255);
